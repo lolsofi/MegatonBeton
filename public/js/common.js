@@ -132,12 +132,10 @@ var JSCCommon = {
 					tabs.Content[index].classList.add('active');
 				}
 			});
-		}); // $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-		// 	$(this)
-		// 		.addClass('active').siblings().removeClass('active')
-		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-		// 		.eq($(this).index()).fadeIn().addClass('active');
-		// });
+		});
+		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
+		});
 	},
 	// /табы
 	inputMask: function inputMask() {
@@ -224,6 +222,11 @@ var JSCCommon = {
 			}, 1100);
 			return false;
 		});
+	},
+	getCurrentYear: function getCurrentYear(el) {
+		var now = new Date();
+		var currentYear = document.querySelector(el);
+		if (currentYear) currentYear.innerText = now.getFullYear();
 	}
 };
 var $ = jQuery;
