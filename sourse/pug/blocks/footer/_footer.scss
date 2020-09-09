@@ -1,7 +1,72 @@
 .footer {
-		
+  padding-bottom: 100px;  
+  
+  background-color: #272727;
+  padding-top: 60px;
+  color: $white;
 
+  &__first-row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
 
+  &__img-wrap{
+    .mb{
+      margin-right: rem(15.21);
+    }
+  }
+
+  &__mail-link{
+    line-height: (19 / 16);
+    color: $secondary;
+  }
+
+  &__phone-link{
+    font-weight: bold;
+    line-height: (19 / 16);
+    color: $white;
+  }
+
+  &__call{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__phone-link{
+    img{
+      margin-right: 7.5px;
+    }
+  }
+
+  &__btn{
+    font-weight: bold;
+    line-height: (19 / 16);
+    text-align: center;
+    color: #FFFFFF;
+    padding: 13px 27px;
+    border: 2px solid #EF9C1C;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+
+  &__sec-row{
+    margin-bottom: 60px;
+  }
+  
+  &__third-row{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__policy{
+    color: $secondary;
+    border-bottom: 1px solid $secondary;
+    &:hover{
+			border-color: transparent;
+		}
+  }
 // 
 @include media-breakpoint-up(xl) {}
 

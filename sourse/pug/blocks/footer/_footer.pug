@@ -1,4 +1,45 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row
+				+e.first-row
+					.col-lg-6
+						+e.img-wrap(href="#")
+							img.mb(src="img/svg/logo-MB.svg", alt="")
+							img(src="img/svg/logo-MB-ru.svg", alt="")
+					.col-lg-2
+						+e.mail-link(href="mailto:info@megatonbeton.ru")
+							span info@megatonbeton.ru
+					+e.call.col-lg-4
+						+e.phone-link(href="tel:")
+							img(src="img/svg/phone.svg", alt="")
+							span +7 (495) 123-12-12
+						+e.A.btn(href="#") Заказать звонок
+
+			.row
+				+e.sec-row
+					.col-auto
+						+e.headline 119192, Москва, Россия, <br> Мичуринский проспект&nbsp;9
+					+e.col.col.three-cols-menu
+						ul
+							li: a(href='#') Главная
+							li: a(href='#') Марки бетона
+							li: a(href='#') Услуги
+							li: a(href='#') Компания
+							li: a(href='#') Стройматериалы
+							li: a(href='#') Доставка
+							li: a(href='#') Контакты
+							li: a(href='#') Прайслист
+					.col-auto
+						+e.headline gfhfghfhfgh
+
+			.row
+				.col
+					+e.third-row
+						+e.copy Megatonbeton.ru &mdash; <br> все права защищены &copy;&nbsp;2020.
+						+e.policy(href="#") Политика конфиденциальности
+						+e.DIV.dd
+							+e.DIV.des Дизайн&nbsp;&mdash; #[strong Artsman]
+							+e.DIV.dev Разработка&nbsp;&mdash; #[strong DigitalDev]
+					
+				
