@@ -1456,13 +1456,13 @@
 	--fgp-width: calc(320px - var(--fgp-gap_container_column, 0%)) !important}.footer__col-addr p{max-width:11.875rem;margin-bottom:1.25rem}.footer__btn-top{margin-top:3.4375rem}.footer .soc{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:start}.sDiscount__text{padding-bottom:.625rem}.sDiscount__inner{padding:0 3.75rem}.sDiscount picture > *{
 	--fgp-gap_percentage-to-pixels_column: initial;
 	--fgp-gap_percentage-to-pixels_row: initial}.sDiscount picture{
-	width:46.625rem;
+	width:46.875rem;
 	position:absolute;
 	left:100%;
 	bottom:0;
-	--fgp-gap_percentage-to-pixels_column: calc(-46.625rem * var(--fgp-gap_percentage-decimal_column)) !important;
-	--fgp-gap_percentage-to-pixels_row: calc(-46.625rem * var(--fgp-gap_percentage-decimal_column)) !important;
-	--fgp-width: calc(46.625rem - var(--fgp-gap_container_column, 0%)) !important}.top-nav{padding-top:.9375rem}.top-nav__main-row{padding-bottom:0}.top-nav__row{padding-top:.4375rem;padding-bottom:1.4375rem}.top-nav__logo img > *{
+	--fgp-gap_percentage-to-pixels_column: calc(-46.875rem * var(--fgp-gap_percentage-decimal_column)) !important;
+	--fgp-gap_percentage-to-pixels_row: calc(-46.875rem * var(--fgp-gap_percentage-decimal_column)) !important;
+	--fgp-width: calc(46.875rem - var(--fgp-gap_container_column, 0%)) !important}.top-nav{padding-top:.9375rem}.top-nav__main-row{padding-bottom:0}.top-nav__row{padding-top:.4375rem;padding-bottom:1.4375rem}.top-nav__logo img > *{
 	--fgp-gap_percentage-to-pixels_column: initial;
 	--fgp-gap_percentage-to-pixels_row: initial}.top-nav__logo img{
 	width:5.75rem;
