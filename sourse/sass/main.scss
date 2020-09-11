@@ -39,7 +39,24 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/navbar";
 // @import "./node_modules/bootstrap/scss/card";
 @import "./node_modules/bootstrap/scss/breadcrumb";
+.breadcrumb-item+.breadcrumb-item:before{
+	position: relative;
+	top: rem(1);
+}
 .breadcrumb {
+		@include media-breakpoint-up(lg) {
+
+			padding-top: rem(80);
+		}
+		@include media-breakpoint-up(sm){
+
+			padding-top: rem(60);
+		}
+		padding-top: rem(40);
+	align-items: center;
+	a{
+		color: $body-color;
+	}
 	.active {
 		a {
 			// color: $breadcrumb-active-color;

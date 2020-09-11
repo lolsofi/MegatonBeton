@@ -1,0 +1,185 @@
+
+	// start .sCalc
+	.sCalc {
+
+		&__footer{
+			background: #F9F9F9;
+			border-radius: 3px;
+			border: 1px solid #E8E8E8;
+			filter: drop-shadow(0px -5px 15px rgba(0, 0, 0, 0.1));
+			.row{
+				margin-left: 0;
+				margin-right: 0;
+				> div{
+					padding-left: rem(30);
+					padding-right: rem(30);
+					display: flex;
+					align-items: center;
+					
+				}
+			}
+		}
+		&__btn{
+				width: rem(268);
+				@extend .btn;
+				@extend .btn-primary;
+				border-radius: 0;
+				margin-top: -1px;
+				margin-bottom: -1px;
+				margin-right: -1px;
+		}
+		&__total{
+			border-right: 1px solid #E8E8E8;
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sCalc
+.tabs{
+	&__caption{
+		display: flex;
+
+	}
+	&__btn{
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: #888888;
+		@include mt;
+		background: #FFFFFF;
+		border: 1px solid #E8E8E8;
+		height: rem(60);
+		font-weight: bold;
+		&:first-child{
+			border-top-left-radius: $border-radius;
+		}
+		&:last-child{
+			border-top-right-radius: $border-radius;
+		}
+		&:not(:last-child){
+			border-right: none;
+		}
+		span{
+				border-bottom: 1px dashed;
+				@include mt;
+		}
+		&:hover{
+			span{
+				border-color: transparent;
+			}
+		}
+		&.active{
+				background-color: $primary;
+				color: #ffffff;
+				color: $body-color;
+				border-color: $primary;
+			span{
+				border-color: transparent;
+			}
+		}
+	}
+}
+
+table{
+	width: 100%;
+ th{
+	 background: #383838;
+	 color: #ffffff;
+	 border: 1px solid #4F4F4F;
+
+ }
+ td,
+ th{
+	 padding: rem(3) rem(5);
+	 height: rem(57);
+	}
+	td{
+		
+		height: rem(60);
+ }
+ tbody{
+	 tr{
+		 &:not(:last-child){
+			 td{
+
+				 border-bottom: none;
+			 }
+		 }
+		 &:hover {
+			 background: #F4F4F4;
+		 }
+	 }
+ }
+ td{
+	 border: 1px solid #E8E8E8;
+	 a{
+		 border-bottom: 1px solid;
+		 &:hover{
+			 border-color: transparent;
+		 }
+	 }
+ }
+}
+
+.add{
+	display: flex;
+	align-items: center;
+	width: rem(130);
+	margin-left: auto;
+	margin-right: auto;
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		position: relative;
+		padding: 0;
+		width: rem(30);
+		height: rem(30);
+		flex: 0 0 rem(30);
+		&::before,
+		&::after{
+			content: '';
+			@include a-cent;
+			background-color:  currentColor;
+		}
+		&::before{
+			width: rem(10);
+			height: 1px;
+		}
+		&--plus{
+			&::after{
+				height: rem(10);
+				width: 1px;
+			}
+
+		}
+	}
+	input{
+		@extend .form-control;
+		margin-left: rem(5);
+		margin-right: rem(5);
+		text-align: center;
+		min-height: 1px;
+		padding: rem(2) .25rem;
+	}
+}

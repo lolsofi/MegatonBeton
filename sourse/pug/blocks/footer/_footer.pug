@@ -1,45 +1,56 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			.row
-				+e.first-row
-					.col-lg-6
-						+e.img-wrap(href="#")
-							img.mb(src="img/svg/logo-MB.svg", alt="")
-							img(src="img/svg/logo-MB-ru.svg", alt="")
-					.col-lg-2
-						+e.mail-link(href="mailto:info@megatonbeton.ru")
-							span info@megatonbeton.ru
-					+e.call.col-lg-4
-						+e.phone-link(href="tel:")
-							img(src="img/svg/phone.svg", alt="")
-							span +7 (495) 123-12-12
-						+e.A.btn(href="#") Заказать звонок
+			+e.head-row.row 
+				.col-md
+					+e.logo
+						.d-none.d-md-block
+							a(href="#")
+								img(src="img/svg/logo-foot.svg" loading="lazy", alt="") 
+						.d-md-none
+							a(href="#")
+								img(src="img/svg/logo.svg" loading="lazy", alt="") 
+				.col-auto.d-none.d-lg-block
+					+e.mail-link.text-secondary(href="mailto:info@megatonbeton.ru") info@megatonbeton.ru
+				.col-md-auto
+					+e.phone-link(href="tel:")
+						img(src="img/svg/phone.svg", alt="")
+						| +7 (495) 123-12-12
+				.col-md-auto
+					+e.A.btn(href="#") Заказать звонок
+			.row  
+				+e.col-addr.col-md-auto
+					.d-lg-none 
+						+e.mail-link.text-secondary(href="mailto:info@megatonbeton.ru") info@megatonbeton.ru
+					p 119192, Москва, Россия,   Мичуринский проспект&nbsp;9
+					.d-none.d-lg-block
+						+soc()
+				 
+				.col.d-none.d-lg-block
+					ul
+						li: a(href='#') Главная
+						li: a(href='#') Компания
+						li: a(href='#') Контакты
+						li: a(href='#') Марки бетона
+						li: a(href='#') Стройматериалы
+						li: a(href='#') Прайслист
+						li: a(href='#') Услуги
+						li: a(href='#') Доставка
+				.col-auto.order-1.order-lg-0
+					+e.btn-top--js 
+						span.d-none.d-md-block Наверх
+						+e.icon-wrap
+							+icon("chevron-up")
 
-			.row
-				+e.sec-row
-					.col-auto
-						+e.headline 119192, Москва, Россия, <br> Мичуринский проспект&nbsp;9
-					+e.col.col.three-cols-menu
-						ul
-							li: a(href='#') Главная
-							li: a(href='#') Марки бетона
-							li: a(href='#') Услуги
-							li: a(href='#') Компания
-							li: a(href='#') Стройматериалы
-							li: a(href='#') Доставка
-							li: a(href='#') Контакты
-							li: a(href='#') Прайслист
-					.col-auto
-						+e.headline gfhfghfhfgh
-
-			.row
-				.col
-					+e.third-row
-						+e.copy Megatonbeton.ru &mdash; <br> все права защищены &copy;&nbsp;2020.
-						+e.policy(href="#") Политика конфиденциальности
-						+e.DIV.dd
-							+e.DIV.des Дизайн&nbsp;&mdash; #[strong Artsman]
-							+e.DIV.dev Разработка&nbsp;&mdash; #[strong DigitalDev]
+				.col.align-self-center.text-lg-center.text-md-right.order-lg-1
+					.d-lg-none
+						+soc()
+					+e.policy(href="#") Политика конфиденциальности
+				.w-100
+				+e.col.col-md-auto.col-12.align-self-center
+					+e.copy Megatonbeton.ru &mdash; <br> все права защищены &copy;&nbsp;2020.
+				+e.col.col-md-auto.col-12.align-self-center.text-md-right.order-md-2
+					+e.dev Дизайн&nbsp;&mdash; #[a(href="#") Artsman]
+					+e.dev Разработка&nbsp;&mdash; #[a(href="#") DigitalDev]
 					
 				

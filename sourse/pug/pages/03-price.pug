@@ -1,0 +1,28 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sSeeAlso/_sSeeAlso.pug
+include ../blocks/sCalc/_sCalc.pug
+include ../blocks/sDiscount/_sDiscount.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Калькулятор'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	+head(title)
+		h1 Прайс-лист на бетон
+	+sCalc
+	+sDiscount
+	+footer()
+
+
+	

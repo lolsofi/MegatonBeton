@@ -1,8 +1,8 @@
 const JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
+	menuMobile: document.querySelector(".top-nav__menu-wrap"),
+	menuMobileLink: [].slice.call(document.querySelectorAll(".top-nav__menu-wrap ul li a")),
 
 	modalCall() {
 
@@ -146,50 +146,7 @@ const JSCCommon = {
 
 		}
 	},
-	sendForm() {
-		var gets = (function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-			return b;
-		})();
-		// form
-		$("form").submit(function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data,
-			}).done(function (data) {
-
-				$.fancybox.close();
-				$.fancybox.open({
-					src: '#modal-thanks',
-					type: 'inline'
-				});
-				// window.location.replace("/thanks.html");
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset");
-					// $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () { });
-
-		});
-	},
+	 
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01;
@@ -227,8 +184,7 @@ function eventHandler() {
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
-	JSCCommon.ifie();
-	JSCCommon.sendForm();
+	JSCCommon.ifie(); 
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 
@@ -236,7 +192,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = '03.jpg';
 	if (screenName && x === "localhost:3000") {
 		$(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -292,6 +248,14 @@ function eventHandler() {
 	// modal window
 
 	
+	$('.menu-item-has-children ul').after('<div class="toggleSubMenu"></div>'); 
+	$(document).on("click", ".toggleSubMenu", function () {
+		$(this).parent().toggleClass("active")
+		$(this).toggleClass("active").prev().toggle()
+	})
+	$(".footer__btn-top--js").click(function () {
+		$('html, body').animate({ scrollTop: 0}, 1100);
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

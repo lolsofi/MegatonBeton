@@ -1,6 +1,9 @@
 
 	// start .sContent
 	.sContent {
+		p{
+			margin-bottom: rem(23);
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

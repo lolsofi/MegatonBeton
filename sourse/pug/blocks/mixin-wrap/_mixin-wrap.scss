@@ -9,6 +9,15 @@
 		vertical-align: middle;
 		@include mt;
 		display: block;
+		background: #474747;
+		color: #ffffff;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: rem(30);
+		height: rem(30);
+
 		&:hover{
 		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			opacity: .6 ;
@@ -16,7 +25,7 @@
 		
 	}
 	.icon{
-	font-size: rem(30);
+	font-size: rem(20);
 	}
 	 
 

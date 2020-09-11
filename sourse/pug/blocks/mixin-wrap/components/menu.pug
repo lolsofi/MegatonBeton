@@ -1,43 +1,29 @@
 mixin mnu()
 	-
 		var nav= { 
-			"Наши работы":"#",
-			"Цены":"#",
-			"Калькулятор":"#",
-			"Акции":"#" ,
-			"Заказать":"#",
+			"Марки бетона":"#",
+			"Стройматериалы":"#" ,
+			"Прайс-лист":"#",
+			"Услуги":"#",
+			"Доставка":"#",
+			"Контакты":"#",
 			}
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		li.menu-item
+			a(href="#" itemprop="url") Главная
 		li.menu-item.menu-item-has-children
-			a(href="#" itemprop="url") О нас
+			a(href="#" itemprop="url") Компания
 			ul.sub-menu
 				-
 					var subnav= { 
-						"Строительство загородных домов":"#",
-						"Отделка загородных домов":"#",
-						"Покраска деревянных домов":"#",
-						"Штукатурные фасады загородных домов":"#" ,
+						"О компании":"#",
+						"Оплата":"#",
+						"Реквизиты":"#",
+						"Адреса заводов":"#",
+						"Статьи":"#",
 						}
-				each sublinkPatch, sublinkName in nav
+				each sublinkPatch, sublinkName in subnav
 					li.menu-item(itemprop="item" ): a(href= sublinkPatch itemprop="url")= sublinkName
 		each linkPatch, linkName in nav
 			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
 
-//- menu
-mixin mnu()
-	-
-		var nav= {
-			"Главная":"/",
-			"Услуги  ":"#",
-			"Подбор септика   ":"#",
-			"Акции ":"#",
-			" О компании  ":"#",
-			" Доставка и оплата ":"#",
-			" Клиентам  ":"#",
-			" Наши работы   ":"#",
-			"Контакты ":"#sContact"
-			}
-	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		each linkPatch, linkName in nav
-			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
-//- /menu

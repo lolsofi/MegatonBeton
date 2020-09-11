@@ -1,0 +1,19 @@
+mixin sSeeAlso()
+	// start sSeeAlso
+	+b.SECTION.sSeeAlso.section#sSeeAlso&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Смотрите также
+				
+			.row
+				mixin item(i, t)
+					+e.col.col-lg-3.col-6
+						+e.item(href="#")
+							+e.inner
+								img(src=`img/svg/menu-${i}.svg` loading="lazy", alt="")
+								+e.DIV.title!= t 
+				+item('1','Оплата')
+				+item('2','Реквизиты')
+				+item('3','Адреса заводов')
+				+item('4','Статьи')
+	// end sSeeAlso

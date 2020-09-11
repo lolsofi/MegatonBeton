@@ -1,16 +1,14 @@
 :root {
 	--animate-delay: 1.2s;
-	--fontSizeBase: #{$em-base};
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(sm) {
 
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
-		--sTPB: #{rem(40)};
+		--fontSizeBase: #{$em-base};
 	}
-
+	--fontSizeBase: 12px;
+	 
 	--sPT: #{rem(80 / 2)};
-	--sPB: #{rem(90 / 2)};
-	--sTPB: #{rem(40 / 2)};
+	--sPB: #{rem(60)};
+	--sTPB: #{rem(40)};
 
 
 		--swiperArrowSize: #{rem(68)};

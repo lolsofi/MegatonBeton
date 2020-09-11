@@ -8,8 +8,7 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
+	
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
@@ -22,6 +21,54 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			+mnu()
+			+e.main-row.row
+				.col-auto
+					+e.logo
+						.d-none.d-sm-block
+							a(href="/")
+								img(src="img/svg/logo.svg", alt="")
+						.d-sm-none
+							a(href="/")
+								img(src="img/svg/logo-sm.svg", alt="")
+				.col
+					+e.row.row
+						.col-auto.d-none.d-lg-block
+							+e.link(href="#") 
+								+icon('calc')
+								| Калькулятор
+						.col
+							.d-none.d-lg-block
+								+e.link(href="#") 
+									+icon('flag')
+									| Заказать бетон
+						.col-auto.d-none.d-lg-block
+							+e.mail(href="mailto:info@megatonbeton.ru") info@megatonbeton.ru
+						.col-auto
+							+e.link--tel(href="tel:+7(977)833-58-89") 
+								+icon('call')
+								| +7 (977) 833-58-89
+						.col-auto.d-none.d-sm-block
+							+e.btn(href="#") Заказать звонок
+						.col-auto.d-lg-none
+							+b.toggle-menu-mobile--js.d-lg-none
+								span
+					+e.menu-wrap 
+						+e.mobile-menu-head.d-lg-none
+							.container
+								+e.row.row
+									+e.col-mobile.col-sm-auto.col-6
+										+e.link(href="#") 
+											+icon('calc')
+											| Калькулятор
+									+e.col-mobile.col
+										+e.link(href="#") 
+											+icon('flag')
+											| Заказать бетон
+									+e.col-mobile.col-sm-auto.text-center
+										+e.mail(href="mailto:info@megatonbeton.ru") info@megatonbeton.ru
+						+e.mobile-menu-body
+							.container.px-0
+								+mnu()
+					
 					
 	// end top-nav

@@ -1,0 +1,17 @@
+mixin sServises()
+	// start sServises
+	+b.SECTION.sServises.pt-0.section#sServises&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Услуги компании
+				
+			.row
+				mixin item(i, t)
+					+e.col.col-md-4
+						+e.item(href="#")
+							img(src=`img/@2x/servises-${i}.jpg` loading="lazy", alt="")
+							+e.DIV.title!= t 
+				+item("1",'Аренда бетононасоса')
+				+item("2",'Лаборатория')
+				+item("3",'Выезд замерщика')
+	// end sServises

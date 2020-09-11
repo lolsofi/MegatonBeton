@@ -1,0 +1,53 @@
+mixin sCalc()
+	// start sCalc
+	+b.sCalc.section#sCalc&attributes(attributes)
+		.container
+			block
+			+e.price-wrap
+				.tabs
+					.tabs__caption
+						.tabs__btn.active: span Товарный бетон
+						.tabs__btn: span Керамзитобетон
+						.tabs__btn: span Бетонный раствор
+						.tabs__btn: span Тощий бетон
+					div
+						mixin cont()
+							.tabs__content&attributes(attributes)
+								
+								table.text-center
+									tr
+										th Марка
+										th Наименование
+										th Стоимость с НДС за м3/руб
+										th Количество кубов
+									tbody
+										mixin tr(t1, t2)
+											tr
+												td
+													a(href="#")= t1
+												td= t2
+												td 3 100 ₽
+												td
+													+b.add
+														+e.btn--minus
+														input(type="number")
+														+e.btn--plus
+									- for (var x = 0; x < 6; x++)
+										+tr("М75",'B5 (гравий) П4 F50 W2')
+										+tr("М100",'B7,5 (гравий) П4 F100 W2')
+										+tr("М75",'B5 (гравий) П4 F50 W2')
+							
+							
+						+cont()(class="active")
+						+cont()
+						+cont()
+						+cont()
+
+			+e.footer
+				.row
+					+e.total.col-auto
+						.strong Всего выбрано товаров:  #[span.text-primary 99]
+					.col
+						.strong На сумму:  #[span.text-primary 9 999 999 ₽]
+					+e.btn(type="button") Рассчитать доставку
+	// end sCalc

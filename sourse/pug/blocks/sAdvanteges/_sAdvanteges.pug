@@ -1,0 +1,16 @@
+mixin sAdvanteges()
+	// start sAdvanteges
+	+b.sAdvanteges#sAdvanteges&attributes(attributes)
+		.container
+			.row
+				mixin item(i, t, p)
+					+e.col.col-lg-3.col-sm-6
+						+e.item
+							img(src=`img/svg/sAdvanteges-${i}.svg` loading="lazy", alt="")
+							+e.title!= t
+							p!= p 
+				+item(`1`,`Собственное производство бетона`,`Вы&nbsp;получаете бетон на&nbsp;прямую от&nbsp;производителя`)
+				+item(`2`,`Качественное <br> сырье`,`Мы&nbsp;поставляем только сертифицированные материалы`)
+				+item(`3`,`Доступная цена на&nbsp;бетон`,`Отгружаем бетон на&nbsp;ваш объект без наценки`)
+				+item(`4`,`Оперативная доставка бетона`,`Доставляем бетон в&nbsp;день обращения`)
+	// end sAdvanteges
