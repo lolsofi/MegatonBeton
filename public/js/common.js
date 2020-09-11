@@ -252,6 +252,9 @@ function eventHandler() {
 			scrollTop: 0
 		}, 1100);
 	});
+	var Sticky2 = new hcSticky('.top-nav', {
+		stickTo: 'body'
+	});
 }
 
 ;

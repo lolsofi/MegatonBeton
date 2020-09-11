@@ -15,11 +15,12 @@ mixin sCalc()
 							.tabs__content&attributes(attributes)
 								
 								table.text-center
-									tr
-										th Марка
-										th Наименование
-										th Стоимость с НДС за м3/руб
-										th Количество кубов
+									thead
+										tr
+											th Марка
+											th Наименование
+											th Стоимость с&nbsp;НДС за&nbsp;м3/руб
+											th Количество кубов
 									tbody
 										mixin tr(t1, t2)
 											tr
@@ -42,12 +43,12 @@ mixin sCalc()
 						+cont()
 						+cont()
 						+cont()
-
-			+e.footer
-				.row
-					+e.total.col-auto
-						.strong Всего выбрано товаров:  #[span.text-primary 99]
-					.col
-						.strong На сумму:  #[span.text-primary 9 999 999 ₽]
-					+e.btn(type="button") Рассчитать доставку
+				
+				+e.footer.sticky-bottom.position-sticky
+					.row
+						+e.total.col-md-auto.col-6
+							.strong Всего выбрано товаров:  #[span.text-primary 99]
+						.col
+							.strong На сумму:  #[span.text-primary 9 999 999 ₽]
+						+e.btn(type="button") Рассчитать доставку
 	// end sCalc
