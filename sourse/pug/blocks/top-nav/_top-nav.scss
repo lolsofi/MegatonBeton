@@ -247,6 +247,9 @@
 				 	@include media-breakpoint-up(lg){
 
 						 border-left: 2px solid transparent;
+						//  margin-left: -1px;
+						position: relative;
+						left: -1px;
 					 }
 				 &:not(:last-child){
 					 border-bottom: 1px solid #E8E8E8;
