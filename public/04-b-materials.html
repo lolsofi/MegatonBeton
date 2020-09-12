@@ -24,215 +24,231 @@
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
 	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
-		<div class="main-wrapper">
-			<!-- start header-->
-			<header class="header" id="header">
-				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
-					<div class="container">
-						<div class="top-nav__main-row row">
-							<div class="col-auto">
-								<div class="top-nav__logo">
-									<div class="d-none d-sm-block"><a href="/"><img src="img/svg/logo.svg" alt=""/></a></div>
-									<div class="d-sm-none"><a href="/"><img src="img/svg/logo-sm.svg" alt=""/></a></div>
+		<!-- start header-->
+		<header class="header" id="header">
+			<!-- start top-nav-->
+			<div class="top-nav block-with-lazy">
+				<div class="container">
+					<div class="top-nav__main-row row">
+						<div class="col-auto">
+							<div class="top-nav__logo">
+								<div class="d-none d-sm-block"><a href="/"><img src="img/svg/logo.svg" alt=""/></a></div>
+								<div class="d-sm-none"><a href="/"><img src="img/svg/logo-sm.svg" alt=""/></a></div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="top-nav__row row">
+								<div class="col-auto d-none d-lg-block"><a class="top-nav__link" href="#"> 
+									<svg class="icon icon-calc ">
+										<use xlink:href="img/svg/sprite.svg#calc"></use>
+									</svg>Калькулятор</a>
+								</div>
+								<div class="col">
+									<div class="d-none d-lg-block"><a class="top-nav__link" href="#"> 
+										<svg class="icon icon-flag ">
+											<use xlink:href="img/svg/sprite.svg#flag"></use>
+										</svg>Заказать бетон</a>
+									</div>
+								</div>
+								<div class="col-auto d-none d-lg-block"><a class="top-nav__mail" href="mailto:info@megatonbeton.ru">info@megatonbeton.ru</a>
+								</div>
+								<div class="col-auto"><a class="top-nav__link top-nav__link--tel" href="tel:+7(977)833-58-89"> 
+									<svg class="icon icon-call ">
+										<use xlink:href="img/svg/sprite.svg#call"></use>
+									</svg>+7 (977) 833-58-89</a>
+								</div>
+								<div class="col-auto d-none d-sm-block"><a class="top-nav__btn" href="#">Заказать звонок</a>
+								</div>
+								<div class="col-auto d-lg-none">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+									</div>
 								</div>
 							</div>
-							<div class="col">
-								<div class="top-nav__row row">
-									<div class="col-auto d-none d-lg-block"><a class="top-nav__link" href="#"> 
-										<svg class="icon icon-calc ">
-											<use xlink:href="img/svg/sprite.svg#calc"></use>
-										</svg>Калькулятор</a>
-									</div>
-									<div class="col">
-										<div class="d-none d-lg-block"><a class="top-nav__link" href="#"> 
-											<svg class="icon icon-flag ">
-												<use xlink:href="img/svg/sprite.svg#flag"></use>
-											</svg>Заказать бетон</a>
-										</div>
-									</div>
-									<div class="col-auto d-none d-lg-block"><a class="top-nav__mail" href="mailto:info@megatonbeton.ru">info@megatonbeton.ru</a>
-									</div>
-									<div class="col-auto"><a class="top-nav__link top-nav__link--tel" href="tel:+7(977)833-58-89"> 
-										<svg class="icon icon-call ">
-											<use xlink:href="img/svg/sprite.svg#call"></use>
-										</svg>+7 (977) 833-58-89</a>
-									</div>
-									<div class="col-auto d-none d-sm-block"><a class="top-nav__btn" href="#">Заказать звонок</a>
-									</div>
-									<div class="col-auto d-lg-none">
-										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-										</div>
-									</div>
-								</div>
-								<div class="top-nav__menu-wrap"> 
-									<div class="top-nav__mobile-menu-head d-lg-none">
-										<div class="container">
-											<div class="top-nav__row row">
-												<div class="top-nav__col-mobile col-sm-auto col-6"><a class="top-nav__link" href="#"> 
-													<svg class="icon icon-calc ">
-														<use xlink:href="img/svg/sprite.svg#calc"></use>
-													</svg>Калькулятор</a>
-												</div>
-												<div class="top-nav__col-mobile col"><a class="top-nav__link" href="#"> 
-													<svg class="icon icon-flag ">
-														<use xlink:href="img/svg/sprite.svg#flag"></use>
-													</svg>Заказать бетон</a>
-												</div>
-												<div class="top-nav__col-mobile col-sm-auto text-center"><a class="top-nav__mail" href="mailto:info@megatonbeton.ru">info@megatonbeton.ru</a>
-												</div>
+							<div class="top-nav__menu-wrap"> 
+								<div class="top-nav__mobile-menu-head d-lg-none">
+									<div class="container">
+										<div class="top-nav__row row">
+											<div class="top-nav__col-mobile col-sm-auto col-6"><a class="top-nav__link" href="#"> 
+												<svg class="icon icon-calc ">
+													<use xlink:href="img/svg/sprite.svg#calc"></use>
+												</svg>Калькулятор</a>
+											</div>
+											<div class="top-nav__col-mobile col"><a class="top-nav__link" href="#"> 
+												<svg class="icon icon-flag ">
+													<use xlink:href="img/svg/sprite.svg#flag"></use>
+												</svg>Заказать бетон</a>
+											</div>
+											<div class="top-nav__col-mobile col-sm-auto text-center"><a class="top-nav__mail" href="mailto:info@megatonbeton.ru">info@megatonbeton.ru</a>
 											</div>
 										</div>
 									</div>
-									<div class="top-nav__mobile-menu-body">
-										<div class="container px-0">
-											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-												<li class="menu-item"><a href="#" itemprop="url">Главная</a></li>
-												<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Компания</a>
-													<ul class="sub-menu">
-														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
-														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оплата</a></li>
-														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Реквизиты</a></li>
-														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Адреса заводов</a></li>
-														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Статьи</a></li>
-													</ul>
-												</li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Марки бетона</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Стройматериалы</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Прайс-лист</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-											</ul>
-										</div>
+								</div>
+								<div class="top-nav__mobile-menu-body">
+									<div class="container px-0">
+										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+											<li class="menu-item"><a href="#" itemprop="url">Главная</a></li>
+											<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Компания</a>
+												<ul class="sub-menu">
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оплата</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Реквизиты</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Адреса заводов</a></li>
+													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Статьи</a></li>
+												</ul>
+											</li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Марки бетона</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Стройматериалы</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Прайс-лист</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- end top-nav-->
-			</header>
-			<!-- end header-->
-			<div class="page-head">
-				<div class="container">
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
-									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Стройматериалы</span>
-									<meta itemprop="position" content="2"/></a></li>
-						</ol>
-					</nav>
-					<h1>Стройматериалы</h1>
-				</div>
 			</div>
-			<!-- start sContent-->
-			<div class="sContent section" id="sContent">
-				<div class="container">
-					<p>Компания МегатонБетон снабжает бетоном стройки Москвы и&nbsp;Московской области с&nbsp;2014&nbsp;года. За&nbsp;это время компания накопила массу положительных отзывов и&nbsp;железобетонную репутацию надежного партнёра. Поставки осуществляются с&nbsp;собственных производств удобно расположенных по&nbsp;Московской области местах, что позволяет быстро и&nbsp;без лишних затрат доставить бетон на&nbsp;ваши объекты собственным автопарком который насчитывает 22&nbsp;миксера разного объёма по&nbsp;7&nbsp;м3&nbsp;и&nbsp;10&nbsp;м3.</p>
-					<p>Наша компания участвует в&nbsp;снабжении строек входящих в&nbsp;Московскую программу реновации.</p>
-					<p>Для производства мы&nbsp;используем только высококачественное сырье, высокий класс которого подтвержден сертификатами. Качество на&nbsp;выходе контролирует лаборатория забирая пробы с&nbsp;каждой поставки, это позволяет быть уверенным в&nbsp;том, что вы&nbsp;получаете именно&nbsp;то, что заказываете.</p>
-					<p>Закажите бетон у&nbsp;нас прямо сейчас и&nbsp;мы&nbsp;доставим заказ в&nbsp;кротчайшие сроки. При необходимости наш технолог поможет определиться с&nbsp;выбором марки подходящей для ваших задач.</p>
-					<!-- start sBMaterials-->
-					<section class="sBMaterials section" id="sBMaterials">
-						<div class="container">
-							<div class="section-title text-center">
-								<h2>sBMaterials</h2>
-							</div>
-							<div class="row"></div>
-						</div>
-					</section>
-					<!-- end sBMaterials-->
-				</div>
+			<!-- end top-nav-->
+		</header>
+		<!-- end header-->
+		<div class="page-head">
+			<div class="container">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+								<meta itemprop="position" content="1"/></a></li>
+						<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Стройматериалы</span>
+								<meta itemprop="position" content="2"/></a></li>
+					</ol>
+				</nav>
+				<h1>Стройматериалы</h1>
 			</div>
-			<!-- end sContent-->
-			<footer class="footer block-with-lazy">
-				<div class="container">
-					<div class="footer__head-row row"> 
-						<div class="col-md">
-							<div class="footer__logo">
-								<div class="d-none d-md-block"><a href="#"><img src="img/svg/logo-foot.svg" loading="lazy" alt=""/></a></div>
-								<div class="d-md-none"><a href="#"><img src="img/svg/logo.svg" loading="lazy" alt=""/></a></div>
-							</div>
-						</div>
-						<div class="col-auto d-none d-lg-block"><a class="footer__mail-link text-secondary" href="mailto:info@megatonbeton.ru">info@megatonbeton.ru</a>
-						</div>
-						<div class="col-md-auto"><a class="footer__phone-link" href="tel:"><img src="img/svg/phone.svg" alt=""/>+7 (495) 123-12-12</a>
-						</div>
-						<div class="col-md-auto"><a class="footer__btn" href="#">Заказать звонок</a>
-						</div>
-					</div>
-					<div class="row"> 
-						<div class="footer__col-addr col-md-auto">
-							<div class="d-lg-none"> <a class="footer__mail-link text-secondary" href="mailto:info@megatonbeton.ru">info@megatonbeton.ru</a>
-							</div>
-							<p>119192, Москва, Россия,   Мичуринский проспект&nbsp;9</p>
-							<div class="d-none d-lg-block">
-								<div class="soc"><a class="soc__item" href="#" target="_blank">
-									<svg class="icon icon-vk ">
-										<use xlink:href="img/svg/sprite.svg#vk"></use>
-									</svg></a><a class="soc__item" href="#" target="_blank">
-									<svg class="icon icon-instagram ">
-										<use xlink:href="img/svg/sprite.svg#instagram"></use>
-									</svg></a><a class="soc__item" href="#" target="_blank">
-									<svg class="icon icon-fb ">
-										<use xlink:href="img/svg/sprite.svg#fb"></use>
-									</svg></a>
-								</div>
-							</div>
-						</div>
-						<div class="col d-none d-lg-block">
-							<ul>
-								<li><a href="#">Главная</a></li>
-								<li><a href="#">Компания</a></li>
-								<li><a href="#">Контакты</a></li>
-								<li><a href="#">Марки бетона</a></li>
-								<li><a href="#">Стройматериалы</a></li>
-								<li><a href="#">Прайслист</a></li>
-								<li><a href="#">Услуги</a></li>
-								<li><a href="#">Доставка</a></li>
-							</ul>
-						</div>
-						<div class="col-auto order-1 order-lg-0">
-							<div class="footer__btn-top footer__btn-top--js"> <span class="d-none d-md-block">Наверх</span>
-								<div class="footer__icon-wrap">
-									<svg class="icon icon-chevron-up ">
-										<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<div class="col align-self-center text-lg-center text-md-right order-lg-1">
-							<div class="d-lg-none">
-								<div class="soc"><a class="soc__item" href="#" target="_blank">
-									<svg class="icon icon-vk ">
-										<use xlink:href="img/svg/sprite.svg#vk"></use>
-									</svg></a><a class="soc__item" href="#" target="_blank">
-									<svg class="icon icon-instagram ">
-										<use xlink:href="img/svg/sprite.svg#instagram"></use>
-									</svg></a><a class="soc__item" href="#" target="_blank">
-									<svg class="icon icon-fb ">
-										<use xlink:href="img/svg/sprite.svg#fb"></use>
-									</svg></a>
-								</div>
-							</div><a class="footer__policy" href="#">Политика конфиденциальности</a>
-						</div>
-						<div class="w-100"></div>
-						<div class="footer__col col-md-auto col-12 align-self-center">
-							<div class="footer__copy">Megatonbeton.ru &mdash; <br> все права защищены &copy;&nbsp;2020.
-							</div>
-						</div>
-						<div class="footer__col col-md-auto col-12 align-self-center text-md-right order-md-2">
-							<div class="footer__dev">Дизайн&nbsp;&mdash; <a href="#">Artsman</a>
-							</div>
-							<div class="footer__dev">Разработка&nbsp;&mdash; <a href="#">DigitalDev</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
 		</div>
+		<!-- start sContent-->
+		<div class="sContent section" id="sContent">
+			<div class="container">
+				<p>Компания МегатонБетон снабжает бетоном стройки Москвы и&nbsp;Московской области с&nbsp;2014&nbsp;года. За&nbsp;это время компания накопила массу положительных отзывов и&nbsp;железобетонную репутацию надежного партнёра. Поставки осуществляются с&nbsp;собственных производств удобно расположенных по&nbsp;Московской области местах, что позволяет быстро и&nbsp;без лишних затрат доставить бетон на&nbsp;ваши объекты собственным автопарком который насчитывает 22&nbsp;миксера разного объёма по&nbsp;7&nbsp;м3&nbsp;и&nbsp;10&nbsp;м3.</p>
+				<p>Наша компания участвует в&nbsp;снабжении строек входящих в&nbsp;Московскую программу реновации.</p>
+				<p>Для производства мы&nbsp;используем только высококачественное сырье, высокий класс которого подтвержден сертификатами. Качество на&nbsp;выходе контролирует лаборатория забирая пробы с&nbsp;каждой поставки, это позволяет быть уверенным в&nbsp;том, что вы&nbsp;получаете именно&nbsp;то, что заказываете.</p>
+				<p>Закажите бетон у&nbsp;нас прямо сейчас и&nbsp;мы&nbsp;доставим заказ в&nbsp;кротчайшие сроки. При необходимости наш технолог поможет определиться с&nbsp;выбором марки подходящей для ваших задач.</p>
+			</div>
+		</div>
+		<!-- end sContent-->
+		<!-- start sBMaterials-->
+		<div class="sBMaterials section" id="sBMaterials">
+			<div class="container">
+				<div class="row">
+							<div class="col-md-6"><a class="sBMaterials__item" href="#"><img src="img/@2x/bMaterials-1.jpg" loading="lazy" alt=""/>
+								<div class="sBMaterials__caption">
+									<div class="h2">Песок</div>
+									<UL>
+										<LI>Карьерный песок</LI>
+										<LI>Мытый карьерный песок</LI>
+										<LI>Сеяный карьерный песок</LI>
+									</UL>
+								</div></a>
+							</div>
+							<div class="col-md-6"><a class="sBMaterials__item" href="#"><img src="img/@2x/bMaterials-2.jpg" loading="lazy" alt=""/>
+								<div class="sBMaterials__caption">
+									<div class="h2">Щебень</div>
+									<UL>
+										<LI>Гравийный щебень</LI>
+										<LI>Известняковый щебень</LI>
+										<LI>Гранитный щебень</LI>
+									</UL>
+								</div></a>
+							</div>
+				</div>
+			</div>
+		</div>
+		<!-- end sBMaterials-->
+		<footer class="footer block-with-lazy">
+			<div class="container">
+				<div class="footer__head-row row"> 
+					<div class="col-md">
+						<div class="footer__logo">
+							<div class="d-none d-md-block"><a href="#"><img src="img/svg/logo-foot.svg" loading="lazy" alt=""/></a></div>
+							<div class="d-md-none"><a href="#"><img src="img/svg/logo.svg" loading="lazy" alt=""/></a></div>
+						</div>
+					</div>
+					<div class="col-auto d-none d-lg-block"><a class="footer__mail-link text-secondary" href="mailto:info@megatonbeton.ru">info@megatonbeton.ru</a>
+					</div>
+					<div class="col-md-auto"><a class="footer__phone-link" href="tel:"><img src="img/svg/phone.svg" alt=""/>+7 (495) 123-12-12</a>
+					</div>
+					<div class="col-md-auto"><a class="footer__btn" href="#">Заказать звонок</a>
+					</div>
+				</div>
+				<div class="row"> 
+					<div class="footer__col-addr col-md-auto">
+						<div class="d-lg-none"> <a class="footer__mail-link text-secondary" href="mailto:info@megatonbeton.ru">info@megatonbeton.ru</a>
+						</div>
+						<p>119192, Москва, Россия,   Мичуринский проспект&nbsp;9</p>
+						<div class="d-none d-lg-block">
+							<div class="soc"><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-vk ">
+									<use xlink:href="img/svg/sprite.svg#vk"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-instagram ">
+									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-fb ">
+									<use xlink:href="img/svg/sprite.svg#fb"></use>
+								</svg></a>
+							</div>
+						</div>
+					</div>
+					<div class="col d-none d-lg-block">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">Компания</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">Марки бетона</a></li>
+							<li><a href="#">Стройматериалы</a></li>
+							<li><a href="#">Прайслист</a></li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Доставка</a></li>
+						</ul>
+					</div>
+					<div class="col-auto order-1 order-lg-0">
+						<div class="footer__btn-top footer__btn-top--js"> <span class="d-none d-md-block">Наверх</span>
+							<div class="footer__icon-wrap">
+								<svg class="icon icon-chevron-up ">
+									<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="col align-self-center text-lg-center text-md-right order-lg-1">
+						<div class="d-lg-none">
+							<div class="soc"><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-vk ">
+									<use xlink:href="img/svg/sprite.svg#vk"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-instagram ">
+									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-fb ">
+									<use xlink:href="img/svg/sprite.svg#fb"></use>
+								</svg></a>
+							</div>
+						</div><a class="footer__policy" href="#">Политика конфиденциальности</a>
+					</div>
+					<div class="w-100"></div>
+					<div class="footer__col col-md-auto col-12 align-self-center">
+						<div class="footer__copy">Megatonbeton.ru &mdash; <br> все права защищены &copy;&nbsp;2020.
+						</div>
+					</div>
+					<div class="footer__col col-md-auto col-12 align-self-center text-md-right order-md-2">
+						<div class="footer__dev">Дизайн&nbsp;&mdash; <a href="#">Artsman</a>
+						</div>
+						<div class="footer__dev">Разработка&nbsp;&mdash; <a href="#">DigitalDev</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
 		<!--  start modals-->
 		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">

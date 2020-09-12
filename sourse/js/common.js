@@ -256,6 +256,11 @@ function eventHandler() {
 	$(".footer__btn-top--js").click(function () {
 		$('html, body').animate({ scrollTop: 0}, 1100);
 	})
+
+ 
+	var Sticky2 = new hcSticky('.top-nav', {
+		stickTo: 'body',
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

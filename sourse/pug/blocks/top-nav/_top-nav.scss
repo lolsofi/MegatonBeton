@@ -1,5 +1,5 @@
 .top-nav { 
-	z-index: 200;
+	z-index: 1200 !important;
 		@include media-breakpoint-up(lg){ 
 			padding-top: rem(15);
 		}
@@ -10,11 +10,10 @@
 	width: 100%;
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 	position: relative;
-	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
+	position: sticky;
+	background-color: #fff;
+	&.sticky { 
+		width: 100% !important;
 	}
 	&__main-row{ 
 		@include media-breakpoint-up(lg){

@@ -1,12 +1,27 @@
 
 	// start .sCalc
 	.sCalc {
-
+		&__price-wrap{
+			// position: relative;
+		}
 		&__footer{
 			background: #F9F9F9;
 			border-radius: 3px;
 			border: 1px solid #E8E8E8;
+			z-index: 200;
+			bottom: 0 !important;
+			top: auto !important;
+			position:-webkit-sticky;
+			position:sticky;
+			bottom:0;
 			filter: drop-shadow(0px -5px 15px rgba(0, 0, 0, 0.1));
+			.strong{
+				padding-top: rem(10);
+				padding-bottom: rem(10);
+			}
+			span{
+				display: inline-block;
+			}
 			.row{
 				margin-left: 0;
 				margin-right: 0;
@@ -20,7 +35,11 @@
 			}
 		}
 		&__btn{
+			@include media-breakpoint-up(md) {
+
 				width: rem(268);
+			}
+				width: 100%;
 				@extend .btn;
 				@extend .btn-primary;
 				border-radius: 0;
@@ -50,16 +69,87 @@
 	//
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(md) {
+		thead,
+		tbody{
+			display: block;
+			text-align: left;
+		}
+		 
+			tr{
+				width: 100%;
+			}
+			th{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				
+				&:last-child{
+					display: none;
+				}
+			}
+			td,
+			th{
+				padding-left: rem(14);
+				--s1: #{(100% * 69 / 300)};
+				--s2: #{(100% * 116 / 300)};
+				display: flex;
+				align-items: center;
+				&:first-child{
+					width: var(--s1);
+					flex: 0 0 var(--s1);
+				}
+				&:nth-child(2){
+					width: var(--s2);
+					flex: 0 0 var(--s2);
+				}
+				&:nth-child(3){
+					width: calc(100% - var(--s1) - var(--s2));
+					flex: 0 0 calc(100% - var(--s1) - var(--s2));
+				}
+			 
+			}
+			tr{
+				display: flex;
+				
+			}
+			tbody{
+				tr{
+					flex-wrap: wrap;
+
+				}
+			}
+			td:last-child{
+				display: flex;
+				width: 100%;
+				padding-right: rem(14);
+				justify-content: space-between;
+				background: #F4F4F4;
+
+				&::before{
+					content: 'Количество кубов:';
+				}
+				.add{
+					margin-right: 0;
+				}
+			}
+		} 
 	@include media-breakpoint-down(sm) {}
 
 } // end.sCalc
 .tabs{
 	&__caption{
 		display: flex;
-
-	}
-	&__btn{
+			@include media-breakpoint-up(md) {
+				flex-wrap: nowrap;
+			}
+			flex-wrap: wrap;
+		}
+		&__btn{
+							@include media-breakpoint-up(md) {
+								width: (100% / 4);
+							}
+							width: (100% / 2);
 		flex-grow: 1;
 		display: flex;
 		justify-content: center;
@@ -71,15 +161,22 @@
 		border: 1px solid #E8E8E8;
 		height: rem(60);
 		font-weight: bold;
+			@include media-breakpoint-up(md){
+				margin-top: 0;
+			}
+			margin-top: -1px;
 		&:first-child{
 			border-top-left-radius: $border-radius;
 		}
 		&:last-child{
 			border-top-right-radius: $border-radius;
 		}
-		&:not(:last-child){
-			border-right: none;
-		}
+			@include media-breakpoint-up(md){
+
+				&:not(:last-child){
+					border-right: none;
+				}
+			}
 		span{
 				border-bottom: 1px dashed;
 				@include mt;
@@ -126,9 +223,12 @@ table{
 				 border-bottom: none;
 			 }
 		 }
-		 &:hover {
-			 background: #F4F4F4;
-		 }
+		 	@include media-breakpoint-up(md){
+
+				 &:hover {
+					 background: #F4F4F4;
+					}
+				}
 	 }
  }
  td{
