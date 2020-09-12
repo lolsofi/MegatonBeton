@@ -59,3 +59,10 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.sContent
+
+.section--04{
+	@include media-breakpoint-up(sm) {
+		padding-bottom: 34px;
+	}
+	padding-bottom: 17px;
+}

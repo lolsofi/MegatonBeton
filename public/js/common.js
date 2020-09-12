@@ -203,7 +203,11 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
+<<<<<<< HEAD
 	screenName = '2-1.jpg';
+=======
+	screenName = '04.jpg';
+>>>>>>> ba7ec7338bf58a5b553b4d7fd5ac12dba575028c
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));

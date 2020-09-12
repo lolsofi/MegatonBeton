@@ -1,0 +1,24 @@
+mixin sBMaterials()
+	// start sBMaterials
+	+b.sBMaterials.section#sBMaterials&attributes(attributes)
+		.container
+			.row
+				mixin item(i,h,li1,li2,li3)
+					.col-lg-6
+						+e.item(href="#")
+							img(src=`img/@2x/bMaterials-${i}.jpg` loading="lazy", alt="")
+							+e.DIV.caption
+								+e.h2!= h
+								UL
+									LI!= li1
+									LI!= li2
+									LI!= li3
+
+				+item(1, `Песок`,`Карьерный песок`,`Мытый карьерный песок`,`Сеяный карьерный песок`)
+				+item(2, `Щебень`,`Гравийный щебень`,`Известняковый щебень`,`Гранитный щебень`)
+
+
+
+
+
+	// end sBMaterials
