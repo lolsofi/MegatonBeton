@@ -1,11 +1,12 @@
 	// start .sBMaterials
 .sBMaterials {
 	
-	padding-top: 0;
-	@include media-breakpoint-up(sm) {
-		padding-bottom: rem(66);
+	@include media-breakpoint-up(md) {
+		padding-top: rem(37);
+		padding-bottom: rem(6);
 	}
-	padding-bottom: rem(36);
+	padding-top: rem(17);
+	padding-bottom: rem(10);
 
 	&__item{
 		display: block;

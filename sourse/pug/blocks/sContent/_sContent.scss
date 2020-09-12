@@ -7,6 +7,30 @@
 		p{
 			margin-bottom: rem(23);
 		}
+		
+		&__item{
+			padding-top: 36px;
+		}
+
+		&__img-wrap{
+			display: block;
+			max-width: 362px;
+			flex: 0 0 rem(362);
+			margin-bottom: 15px;
+			border-radius: rem(5);
+			overflow: hidden;
+			// object-fit: cover;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		&__title{
+			color: $body-color;
+			text-align: center;
+		}
+		
 		li{
 			list-style: none;
 			position: relative;
