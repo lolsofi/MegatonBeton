@@ -1,10 +1,63 @@
+body.main-page .top-nav{
+	position: absolute;
+
+	&.fixedReadyStart{
+		// position: fixed;
+		transform: translateY(-100%);
+		
+	}
+			&.fixedReady{
+				
+				position: fixed;
+			}
+			&.fixed {
+				transform: translateY(0);
+			}
+			&:not(.fixedReady) {
+				
+				background-color: transparent;
+				box-shadow: none;
+			}
+			&:not(.fixedReadyStart){
+				// @include mt(0);
+				
+	
+	svg{
+		[fill='#272727'] {
+			fill: #ffffff !important;
+		}
+	}
+	.top-nav__link{
+		color: #ffffff !important;
+	}
+	.top-nav__btn{
+		color: #ffffff;
+		&:hover{
+			color: $primary;
+		}
+	}
+	.menu>li:not(:hover):not(.current-menu-item)>a {
+		&:not(:hover){
+			color: #ffffff;
+		}
+	}
+	.top-nav__logo::before,
+	.top-nav__menu-wrap:before{
+		background-color: rgba(255, 255, 255, 0.15);
+	}
+	}
+}
+body.fixed .top-nav{
+	position: fixed;
+}
+
 .top-nav { 
 	z-index: 1200 !important;
 		@include media-breakpoint-up(lg){ 
 			padding-top: rem(15);
 		}
 		padding-top: rem(10);
-	@include mt; 
+	@include mt(.6); 
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -34,6 +87,18 @@
 		 --logoSp: #{rem(35)};
 		}
 	 &__logo{
+		 position: relative;
+		 @include media-breakpoint-up(lg){
+			 	&::before {
+			 		content: '';
+			 		position: absolute;
+			 		top: 64%;
+			 		right: calc(100% +   var(--logoSp, 20px));
+			 		width: 200vw;
+			 		height: 1px;
+			 		background-color: #E8E8E8;
+			 	}
+		 }
 		img{
 			@include media-breakpoint-up(lg){
 
@@ -42,7 +107,7 @@
 			@include media-breakpoint-up(sm){
 				width: rem(70);
 			}
-			width: rem(40);
+			width: 40px;
 		}  
 		margin-right: var(--logoSp);
 	 }
@@ -101,6 +166,7 @@
 		width: 100%;
 		background-color: #ffffff;
 		@include media-breakpoint-up(lg) {
+			background-color: transparent;
 			display: block !important;
 			position: relative;
 			top: 0;
@@ -160,7 +226,10 @@
 		
 		li{
 			@include media-breakpoint-up(lg){
-				border-bottom: none;
+					&:not(:last-child){
+
+						border-bottom: none;
+					}
 			}
 			&:not(:last-child) {
 				border-bottom: 1px solid #E8E8E8;

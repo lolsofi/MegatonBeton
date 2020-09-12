@@ -3,20 +3,30 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
-
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sCalc/_sCalc.pug
+include ../blocks/sDiscount/_sDiscount.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sShippingPrice/_sShippingPrice.pug
+include ../blocks/sSert/_sSert.pug
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'main-page'
 block title
 	- let  title= 'title'
 	title= title
 block pagecontent
 	//- +mob-mnu()
-	+header()
-		+top-nav()
-		+topLine()
+	+top-nav()
 	+headerBlock()
-	+sForm()
-	+sContact()
+	+sAdvanteges
+	+sCalc()(class="bg-light")
+		+b.section-title--before.text-center
+			h2 Калькулятор стоимости
+			+e.text Прайс-лист с&nbsp;актуальными ценами на&nbsp;бетон в&nbsp;Москве и&nbsp;Московской области
+	+sDiscount
+	+sSteps
+	+sShippingPrice
+	+sSert
 	+footer()
 
 

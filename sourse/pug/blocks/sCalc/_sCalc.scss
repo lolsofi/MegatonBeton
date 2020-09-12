@@ -1,6 +1,15 @@
 
 	// start .sCalc
+	.main-page .sCalc {
+		padding-bottom: calc(var(--sPB) * 1.5);
+	}
 	.sCalc {
+		.section-title{
+			@include media-breakpoint-up(lg) {
+
+				padding-top: rem(30);
+			}
+		}
 		&__price-wrap{
 			// position: relative;
 		}
@@ -138,6 +147,7 @@
 
 } // end.sCalc
 .tabs{
+	background-color: #ffffff;
 	&__caption{
 		display: flex;
 			@include media-breakpoint-up(md) {

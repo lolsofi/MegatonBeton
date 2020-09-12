@@ -1,6 +1,35 @@
 .form-wrap{
+	&--horizontal{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(820);
+		padding-top: rem(12);
+		.row{
+			@include roww(15px);
+		}
+	}
+	&__small{
+		text-align: center;
+		color: #B8B8B8;
+		font-size: rem(12);
+		padding-top: rem(14);
+		a{
+			color: $secondary;
+			border-bottom: 1px solid ;
+			display: inline-block;
+			&:hover{
+				color: $primary;
+			}
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		@extend .btn-block;
+	}
  	&__input-wrap{
 			// @extend .form-group;
+			margin-bottom: 1rem;
 			
 		}
 		&__input{

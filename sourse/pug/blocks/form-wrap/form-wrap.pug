@@ -75,3 +75,14 @@ mixin polite()
 	+e.polite
 		+in-c()(checked)
 			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+
+mixin form-h()
+	+form-wrap()(class="form-wrap--horizontal")
+		.row
+			.col-md-4
+				+input("Введите имя")
+			.col-md-4
+				+input("+7 (___) ___-__-__",'tel')
+			.col-md-4
+				+e.btn(type="submit") Заказать доставку
+		+e.small Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;#[a(href="#") пользовательским соглашением]

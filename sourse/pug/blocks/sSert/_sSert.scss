@@ -1,0 +1,63 @@
+
+	// start .sSert
+	.sSert {
+		@include media-breakpoint-up(sm) {
+			--sTPB: #{rem(40)};
+		--sPT: #{rem(80)};
+	}
+	--sPT: #{rem(65)};
+		&__control-wrap{
+			position: relative;
+			width: rem(135);
+			margin-left: auto;
+			margin-right: auto;
+			height: rem(60);
+			margin-top: rem(75);
+			@include media-breakpoint-up(sm) {
+
+				margin-bottom: rem(15);
+			}
+		}
+		.section-title__text{
+			padding-top: rem(25);
+		
+		}
+		&__img-wrap{
+			border: 1px solid #E8E8E8;
+			box-sizing: border-box;
+			border-radius: 10px;
+			@include block(264, 388);
+			img{
+				position: absolute;
+				@include a-cent;
+				max-width: calc(100% );
+				max-height: calc(100% );
+			}
+
+			overflow: hidden;
+			display: block;
+			text-align: center;
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sSert

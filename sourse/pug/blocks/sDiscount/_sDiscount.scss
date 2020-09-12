@@ -1,5 +1,38 @@
 
 	// start .sDiscount
+	.main-page .sDiscount{
+		background: #383838;
+		color: #ffffff;
+		// margin-top: rem(30);
+		p{
+			color: #ffffff;
+		}
+		&__inner{
+			padding-left: 0;
+			padding-right: 0;
+			overflow: visible;
+			background-color: transparent;
+			padding-top: rem(25);
+				@include media-breakpoint-up(lg) {
+
+					padding-top: rem(45);
+					padding-bottom: rem(12);
+				}
+				padding-top: 0;
+				padding-bottom: 0;
+			margin-bottom: rem(0);
+		}
+		&__text{
+			@include media-breakpoint-down(lg){
+				padding-bottom: 0;
+				padding-top: 0;
+			}
+		}
+		picture{
+			bottom: rem(-30);
+			left: calc(100% + 30px);
+		}
+	}
 	.sDiscount {
 		
 		&__text{
@@ -9,7 +42,11 @@
 			padding-top: rem(50);
 			@include media-breakpoint-up(lg) {
 			padding-bottom: rem(10);
+			margin-left: 0;
+			margin-right: 0;
 		}
+		margin-left: auto;
+		margin-right: auto;
 		padding-bottom: rem(50);
 		}
 		&__inner{

@@ -23,136 +23,1421 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
-		<!-- start header-->
-		<header class="header" id="header">
-			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<div class="top-nav__main-row row">
-						<div class="col-auto">
-							<div class="top-nav__logo">
-								<div class="d-none d-sm-block"><a href="/"><img src="img/svg/logo.svg" alt=""/></a></div>
-								<div class="d-sm-none"><a href="/"><img src="img/svg/logo-sm.svg" alt=""/></a></div>
+	<body class="main-page"><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+		<!-- start top-nav-->
+		<div class="top-nav block-with-lazy">
+			<div class="container">
+				<div class="top-nav__main-row row">
+					<div class="col-auto">
+						<div class="top-nav__logo">
+							<div class="d-none d-sm-block"><a href="/"><img src="img/svg/logo.svg" alt=""/></a></div>
+							<div class="d-sm-none"><a href="/">
+									<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.06373 2.36605C8.01214 3.2154 14.0212 3.57941 19.9697 3.57941C25.9181 3.57941 31.9272 3.15473 37.8756 2.36605V37.4928C31.9272 36.7041 25.9181 36.2794 19.9697 36.2794C14.0212 36.2794 8.01214 36.7041 2.06373 37.4928V2.36605ZM40 0C33.3839 1.03136 26.6464 1.57737 19.9697 1.57737C13.2929 1.57737 6.61609 1.03136 0 0C0 13.347 0 26.6332 0 39.9802C6.61609 38.9488 13.2929 38.4635 19.9697 38.4635C26.6464 38.4635 33.3232 38.9488 39.9393 39.9802C40 26.6332 40 13.2863 40 0Z" fill="#F09C1A"></path>
+										<path d="M21.365 13.043V27.846H17.6017V19.8378L14.0205 25.7832H13.6564L10.0752 19.8378V27.7853H6.31189V13.043H10.0752L13.7777 19.3524L17.541 13.043H21.365Z" fill="#272727"></path>
+										<path d="M29.7418 19.1098C30.9558 19.1098 31.9876 19.5344 32.8374 20.3838C33.6872 21.2331 34.1121 22.2645 34.1121 23.4779C34.1121 24.6912 33.6872 25.7226 32.8374 26.5719C31.9876 27.4213 30.9558 27.846 29.7418 27.846H24.4004V13.043H32.8981V14.0743H25.493V19.1098H29.7418ZM29.7418 26.7539C30.6523 26.7539 31.3807 26.4506 32.0483 25.7832C32.6553 25.1159 33.0195 24.3272 33.0195 23.4172C33.0195 22.5072 32.716 21.7185 32.0483 21.1118C31.4414 20.4445 30.6523 20.1411 29.7418 20.1411H25.493V26.7539H29.7418Z" fill="#272727"></path>
+									</svg></a></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="top-nav__row row">
+							<div class="col-auto d-none d-lg-block"><a class="top-nav__link" href="#"> 
+								<svg class="icon icon-calc ">
+									<use xlink:href="img/svg/sprite.svg#calc"></use>
+								</svg>Калькулятор</a>
+							</div>
+							<div class="col">
+								<div class="d-none d-lg-block"><a class="top-nav__link" href="#"> 
+									<svg class="icon icon-flag ">
+										<use xlink:href="img/svg/sprite.svg#flag"></use>
+									</svg>Заказать бетон</a>
+								</div>
+							</div>
+							<div class="col-auto d-none d-lg-block"><a class="top-nav__mail" href="mailto:info@megatonbeton.ru">info@megatonbeton.ru</a>
+							</div>
+							<div class="col-auto"><a class="top-nav__link top-nav__link--tel" href="tel:+7(977)833-58-89"> 
+								<svg class="icon icon-call ">
+									<use xlink:href="img/svg/sprite.svg#call"></use>
+								</svg>+7 (977) 833-58-89</a>
+							</div>
+							<div class="col-auto d-none d-sm-block"><a class="top-nav__btn" href="#">Заказать звонок</a>
+							</div>
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+								</div>
 							</div>
 						</div>
-						<div class="col">
-							<div class="top-nav__row row">
-								<div class="col-auto d-none d-lg-block"><a class="top-nav__link" href="#"> 
-									<svg class="icon icon-calc ">
-										<use xlink:href="img/svg/sprite.svg#calc"></use>
-									</svg>Калькулятор</a>
-								</div>
-								<div class="col">
-									<div class="d-none d-lg-block"><a class="top-nav__link" href="#"> 
-										<svg class="icon icon-flag ">
-											<use xlink:href="img/svg/sprite.svg#flag"></use>
-										</svg>Заказать бетон</a>
-									</div>
-								</div>
-								<div class="col-auto d-none d-lg-block"><a class="top-nav__mail" href="mailto:info@megatonbeton.ru">info@megatonbeton.ru</a>
-								</div>
-								<div class="col-auto"><a class="top-nav__link top-nav__link--tel" href="tel:+7(977)833-58-89"> 
-									<svg class="icon icon-call ">
-										<use xlink:href="img/svg/sprite.svg#call"></use>
-									</svg>+7 (977) 833-58-89</a>
-								</div>
-								<div class="col-auto d-none d-sm-block"><a class="top-nav__btn" href="#">Заказать звонок</a>
-								</div>
-								<div class="col-auto d-lg-none">
-									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-									</div>
-								</div>
-							</div>
-							<div class="top-nav__menu-wrap"> 
-								<div class="top-nav__mobile-menu-head d-lg-none">
-									<div class="container">
-										<div class="top-nav__row row">
-											<div class="top-nav__col-mobile col-sm-auto col-6"><a class="top-nav__link" href="#"> 
-												<svg class="icon icon-calc ">
-													<use xlink:href="img/svg/sprite.svg#calc"></use>
-												</svg>Калькулятор</a>
-											</div>
-											<div class="top-nav__col-mobile col"><a class="top-nav__link" href="#"> 
-												<svg class="icon icon-flag ">
-													<use xlink:href="img/svg/sprite.svg#flag"></use>
-												</svg>Заказать бетон</a>
-											</div>
-											<div class="top-nav__col-mobile col-sm-auto text-center"><a class="top-nav__mail" href="mailto:info@megatonbeton.ru">info@megatonbeton.ru</a>
-											</div>
+						<div class="top-nav__menu-wrap"> 
+							<div class="top-nav__mobile-menu-head d-lg-none">
+								<div class="container">
+									<div class="top-nav__row row">
+										<div class="top-nav__col-mobile col-sm-auto col-6"><a class="top-nav__link" href="#"> 
+											<svg class="icon icon-calc ">
+												<use xlink:href="img/svg/sprite.svg#calc"></use>
+											</svg>Калькулятор</a>
+										</div>
+										<div class="top-nav__col-mobile col"><a class="top-nav__link" href="#"> 
+											<svg class="icon icon-flag ">
+												<use xlink:href="img/svg/sprite.svg#flag"></use>
+											</svg>Заказать бетон</a>
+										</div>
+										<div class="top-nav__col-mobile col-sm-auto text-center"><a class="top-nav__mail" href="mailto:info@megatonbeton.ru">info@megatonbeton.ru</a>
 										</div>
 									</div>
 								</div>
-								<div class="top-nav__mobile-menu-body">
-									<div class="container px-0">
-										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-item"><a href="#" itemprop="url">Главная</a></li>
-											<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Компания</a>
-												<ul class="sub-menu">
-													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
-													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оплата</a></li>
-													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Реквизиты</a></li>
-													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Адреса заводов</a></li>
-													<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Статьи</a></li>
-												</ul>
-											</li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Марки бетона</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Стройматериалы</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Прайс-лист</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка</a></li>
-											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-										</ul>
-									</div>
+							</div>
+							<div class="top-nav__mobile-menu-body">
+								<div class="container px-0">
+									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="menu-item"><a href="#" itemprop="url">Главная</a></li>
+										<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Компания</a>
+											<ul class="sub-menu">
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оплата</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Реквизиты</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Адреса заводов</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Статьи</a></li>
+											</ul>
+										</li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Марки бетона</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Стройматериалы</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Прайс-лист</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- end top-nav-->
-			<!-- start topLine-->
-			<section class="topLine section" id="topLine">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>topLine</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end topLine-->
-		</header>
-		<!-- end header-->
+		</div>
+		<!-- end top-nav-->
 		<!-- start headerBlock-->
-		<div class="headerBlock section" id="headerBlock">
-			<div class="container">
-				<div class="section-title text-center">
-					<h2>headerBlock ds dfsdfdsfsd</h2>
+		<div class="headerBlock section" id="headerBlock"><img src="img/@2x/head-bg.jpg" loading="lazy" alt=""/>
+			<div class="td">
+				<div class="container">
+					<div class="section-title section-title--before text-center">
+						<h1>Бетон с&nbsp;доставкой в&nbsp;Москве и&nbsp;московской области</h1>
+						<div class="section-title__text">Доставка бетона в&nbsp;день заказа
+						</div>
+					</div>
+					<div class="form-wrap form-wrap form-wrap--horizontal">
+						<form>
+							<input type="hidden" name="example-input-field"/>
+							<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+							<input class="utm_source" type="hidden" name="utm_source"/>
+							<input class="utm_term" type="hidden" name="utm_term"/>
+							<input class="utm_medium" type="hidden" name="utm_medium"/>
+							<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите имя" name="text"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-md-4">
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+7 (___) ___-__-__" name="tel"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-md-4">
+									<button class="form-wrap__btn" type="submit">Заказать доставку
+									</button>
+								</div>
+							</div>
+							<div class="form-wrap__small">Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a href="#">пользовательским соглашением</a>
+							</div>
+						</form>
+					</div>
 				</div>
-				<div class="row"></div>
+				<div class="headerBlock__scroll-down">
+					<svg class="icon icon-chevron-down ">
+						<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+					</svg>
+				</div>
 			</div>
 		</div>
 		<!-- end headerBlock-->
-		<!-- start sForm-->
-		<section class="sForm section" id="sForm">
+		<!-- start sAdvanteges-->
+		<div class="sAdvanteges" id="sAdvanteges">
 			<div class="container">
-				<div class="section-title text-center">
-					<h2>sForm</h2>
+				<div class="row">
+							<div class="sAdvanteges__col col-lg-3 col-sm-6">
+								<div class="sAdvanteges__item"><img src="img/svg/sAdvanteges-1.svg" loading="lazy" alt=""/>
+									<div class="sAdvanteges__title">Собственное производство бетона
+									</div>
+									<p>Вы&nbsp;получаете бетон на&nbsp;прямую от&nbsp;производителя</p>
+								</div>
+							</div>
+							<div class="sAdvanteges__col col-lg-3 col-sm-6">
+								<div class="sAdvanteges__item"><img src="img/svg/sAdvanteges-2.svg" loading="lazy" alt=""/>
+									<div class="sAdvanteges__title">Качественное <br> сырье
+									</div>
+									<p>Мы&nbsp;поставляем только сертифицированные материалы</p>
+								</div>
+							</div>
+							<div class="sAdvanteges__col col-lg-3 col-sm-6">
+								<div class="sAdvanteges__item"><img src="img/svg/sAdvanteges-3.svg" loading="lazy" alt=""/>
+									<div class="sAdvanteges__title">Доступная цена на&nbsp;бетон
+									</div>
+									<p>Отгружаем бетон на&nbsp;ваш объект без наценки</p>
+								</div>
+							</div>
+							<div class="sAdvanteges__col col-lg-3 col-sm-6">
+								<div class="sAdvanteges__item"><img src="img/svg/sAdvanteges-4.svg" loading="lazy" alt=""/>
+									<div class="sAdvanteges__title">Оперативная доставка бетона
+									</div>
+									<p>Доставляем бетон в&nbsp;день обращения</p>
+								</div>
+							</div>
 				</div>
-				<div class="row"></div>
+			</div>
+		</div>
+		<!-- end sAdvanteges-->
+		<!-- start sCalc-->
+		<div class="sCalc section bg-light" id="sCalc">
+			<div class="container">
+				<div class="section-title section-title--before text-center">
+					<h2>Калькулятор стоимости</h2>
+					<div class="section-title__text">Прайс-лист с&nbsp;актуальными ценами на&nbsp;бетон в&nbsp;Москве и&nbsp;Московской области
+					</div>
+				</div>
+				<div class="sCalc__price-wrap">
+					<div class="tabs">
+						<div class="tabs__caption">
+							<div class="tabs__btn active"><span>Товарный бетон</span></div>
+							<div class="tabs__btn"><span>Керамзитобетон</span></div>
+							<div class="tabs__btn"><span>Бетонный раствор</span></div>
+							<div class="tabs__btn"><span>Тощий бетон</span></div>
+						</div>
+						<div>
+									<div class="tabs__content active">
+										<table class="text-center">
+											<thead>
+												<tr>
+													<th>Марка</th>
+													<th>Наименование</th>
+													<th>Стоимость с&nbsp;НДС за&nbsp;м3/руб</th>
+													<th>Количество кубов</th>
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+										</table>
+									</div>
+									<div class="tabs__content">
+										<table class="text-center">
+											<thead>
+												<tr>
+													<th>Марка</th>
+													<th>Наименование</th>
+													<th>Стоимость с&nbsp;НДС за&nbsp;м3/руб</th>
+													<th>Количество кубов</th>
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+										</table>
+									</div>
+									<div class="tabs__content">
+										<table class="text-center">
+											<thead>
+												<tr>
+													<th>Марка</th>
+													<th>Наименование</th>
+													<th>Стоимость с&nbsp;НДС за&nbsp;м3/руб</th>
+													<th>Количество кубов</th>
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+										</table>
+									</div>
+									<div class="tabs__content">
+										<table class="text-center">
+											<thead>
+												<tr>
+													<th>Марка</th>
+													<th>Наименование</th>
+													<th>Стоимость с&nbsp;НДС за&nbsp;м3/руб</th>
+													<th>Количество кубов</th>
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М100</a></td>
+																	<td>B7,5 (гравий) П4 F100 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><a href="#">М75</a></td>
+																	<td>B5 (гравий) П4 F50 W2</td>
+																	<td>3 100 ₽</td>
+																	<td>
+																		<div class="add">
+																			<div class="add__btn add__btn--minus">
+																			</div>
+																			<input type="number"/>
+																			<div class="add__btn add__btn--plus">
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+										</table>
+									</div>
+						</div>
+					</div>
+					<div class="sCalc__footer sticky-bottom position-sticky">
+						<div class="row">
+							<div class="sCalc__total col-md-auto col-6">
+								<div class="strong">Всего выбрано товаров:  <span class="text-primary">99</span></div>
+							</div>
+							<div class="col">
+								<div class="strong">На сумму:  <span class="text-primary">9 999 999 ₽</span></div>
+							</div>
+							<button class="sCalc__btn" type="button">Рассчитать доставку
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end sCalc-->
+		<!-- start sDiscount-->
+		<section class="sDiscount section" id="sDiscount">
+			<div class="container">
+				<div class="sDiscount__inner">
+					<div class="sDiscount__text">
+						<div class="section-title section-title--before">
+							<h2>Получите скидку&nbsp;50% на&nbsp;доставку бетона</h2>
+						</div>
+						<p>Отправьте заявку и&nbsp;получите скидку&nbsp;50% на&nbsp;доставку бетона по&nbsp;Москве и&nbsp;Московской области</p><a class="sDiscount__btn" href="#">Получить скидку</a>
+						<!-- picture-->
+						<picture> 
+							<noscript class="loading-lazy">
+								<source srcset="img/@2x/webp/truck.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="img/@1x/webp/truck.webp" loading="lazy" type="image/webp"/>
+								<source srcset="img/@2x/truck.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+								<source srcset="img/@1x/truck.png" loading="lazy" type="image/png"/><img src="img/@2x/truck.png" loading="lazy" alt=""/>
+							</noscript>
+						</picture>
+						<!-- /picture-->
+					</div>
+				</div>
 			</div>
 		</section>
-		<!-- end sForm-->
-		<!-- start sContact-->
-		<section class="sContact section" id="sContact">
+		<!-- end sDiscount-->
+		<!-- start sSteps-->
+		<section class="sSteps section" id="sSteps">
 			<div class="container">
-				<div class="section-title text-center">
-					<h2>sContact</h2>
+				<div class="section-title section-title--before text-center">
+					<h2>Этапы работы</h2>
+					<div class="section-title__text">Прайс-лист с&nbsp;актуальными ценами на&nbsp;бетон в&nbsp;Москве и&nbsp;Московской области
+					</div>
 				</div>
-				<div class="row"></div>
+				<div class="row">
+							<div class="sSteps__col col-xl col-md-4 col-sm-6">
+								<div class="sSteps__item">
+									<div class="sSteps__img-wrap"><img src="img/svg/step-1.svg" loading="lazy" alt=""/>
+									</div>
+									<div class="sSteps__title">Заявка
+									</div>
+									<p>Вы&nbsp;оставляете заявку на&nbsp;сайте либо звоните по&nbsp;указанному телефону в&nbsp;наш отдел продаж</p>
+								</div>
+							</div>
+							<div class="sSteps__col col-xl col-md-4 col-sm-6">
+								<div class="sSteps__item">
+									<div class="sSteps__img-wrap"><img src="img/svg/step-2.svg" loading="lazy" alt=""/>
+									</div>
+									<div class="sSteps__title">Расчет стоимости
+									</div>
+									<p>Наши менеджеры рассчитают для Вас полную стоимость заказа с&nbsp;учётом доставки на&nbsp;Ваш объект</p>
+								</div>
+							</div>
+							<div class="sSteps__col col-xl col-md-4 col-sm-6">
+								<div class="sSteps__item">
+									<div class="sSteps__img-wrap"><img src="img/svg/step-3.svg" loading="lazy" alt=""/>
+									</div>
+									<div class="sSteps__title">Отгрузка
+									</div>
+									<p>Мы&nbsp;отгрузим бетон с&nbsp;ближайшего к&nbsp;Вам завода для уменьшения стоимости доставки</p>
+								</div>
+							</div>
+							<div class="sSteps__col col-xl col-md-4 col-sm-6">
+								<div class="sSteps__item">
+									<div class="sSteps__img-wrap"><img src="img/svg/step-4.svg" loading="lazy" alt=""/>
+									</div>
+									<div class="sSteps__title">Доставка
+									</div>
+									<p>Заказ будет доставлен в&nbsp;точно в&nbsp;срок со&nbsp;всеми сопроводительными документами, возможна доставка в&nbsp;тот&nbsp;же день</p>
+								</div>
+							</div>
+							<div class="sSteps__col col-xl col-md-4 col-sm-6">
+								<div class="sSteps__item">
+									<div class="sSteps__img-wrap"><img src="img/svg/step-5.svg" loading="lazy" alt=""/>
+									</div>
+									<div class="sSteps__title">Оплата
+									</div>
+									<p>Оплата осуществляется по&nbsp;наличному и&nbsp;безналичному расчету</p>
+								</div>
+							</div>
+				</div><a class="sSteps__btn" href="#">Оставить заявку</a>
 			</div>
 		</section>
-		<!-- end sContact-->
+		<!-- end sSteps-->
+		<!-- start sShippingPrice-->
+		<section class="sShippingPrice section" id="sShippingPrice">
+			<div class="container">
+				<div class="section-title section-title--before text-center">
+					<h2>Стоимость доставки бетона в&nbsp;Москве и&nbsp;МО</h2>
+				</div>
+				<div class="row">
+					<div class="sShippingPrice__col col-lg-6">
+						<p>Компания МегатонБетон снабжает бетоном стройки Москвы и&nbsp;Московской области с&nbsp;2014&nbsp;года. За&nbsp;это время компания накопила массу положительных отзывов и&nbsp;железобетонную репутацию надежного партнёра. Поставки осуществляются с&nbsp;собственных производств удобно расположенных по&nbsp;Московской области местах, что позволяет быстро и&nbsp;без лишних затрат доставить бетон на&nbsp;ваши объекты собственным автопарком который насчитывает 22&nbsp;миксера разного объёма по&nbsp;7&nbsp;м3&nbsp;и&nbsp;10&nbsp;м3.</p>
+						<p>Наша компания участвует в&nbsp;снабжении строек входящих в&nbsp;Московскую программу реновации.</p>
+						<p>Для производства мы&nbsp;используем только высококачественное сырье, высокий класс которого подтвержден сертификатами. Качество на&nbsp;выходе контролирует лаборатория забирая пробы с&nbsp;каждой поставки, это позволяет быть уверенным в&nbsp;том, что вы&nbsp;получаете именно&nbsp;то, что заказываете.</p>
+						<p>Закажите бетон у&nbsp;нас прямо сейчас и&nbsp;мы&nbsp;доставим заказ в&nbsp;кротчайшие сроки. При необходимости наш технолог поможет определиться с&nbsp;выбором марки подходящей для ваших задач.</p>
+					</div>
+					<div class="col-lg-6 order-lg-first">
+						<picture>
+							<source srcset="img/@2x/map.jpg" loading="lazy" type="image/jpg" media="(min-width:992px)"/><img src="img/@2x/map-tablet.jpg" loading="lazy" alt=""/>
+						</picture>
+					</div>
+				</div><a class="sShippingPrice__btn btn-section" href="#">Заказать бетон</a>
+			</div>
+		</section>
+		<!-- end sShippingPrice-->
+		<!-- start sSert-->
+		<section class="sSert section" id="sSert">
+			<div class="container">
+				<div class="section-title section-title--before text-center">
+					<h2>Свидетельства и&nbsp;сертификаты качества</h2>
+					<div class="section-title__text">Прайс-лист с&nbsp;актуальными ценами на&nbsp;бетон в&nbsp;Москве и&nbsp;Московской области
+					</div>
+				</div>
+				<div class="sSert__slider sSert__slider--js swiper-container">
+					<div class="swiper-wrapper">
+							<div class="sSert__slide swiper-slide"><a class="sSert__img-wrap" href="img/@2x/sert-1.jpg" data-fancybox="sertgal"><img class="swiper-lazy" src="#" data-src="img/@1x/sert-1.jpg" alt=""/></a>
+							</div>
+							<div class="sSert__slide swiper-slide"><a class="sSert__img-wrap" href="img/@2x/sert-2.jpg" data-fancybox="sertgal"><img class="swiper-lazy" src="#" data-src="img/@1x/sert-2.jpg" alt=""/></a>
+							</div>
+							<div class="sSert__slide swiper-slide"><a class="sSert__img-wrap" href="img/@2x/sert-1.jpg" data-fancybox="sertgal"><img class="swiper-lazy" src="#" data-src="img/@1x/sert-1.jpg" alt=""/></a>
+							</div>
+							<div class="sSert__slide swiper-slide"><a class="sSert__img-wrap" href="img/@2x/sert-2.jpg" data-fancybox="sertgal"><img class="swiper-lazy" src="#" data-src="img/@1x/sert-2.jpg" alt=""/></a>
+							</div>
+							<div class="sSert__slide swiper-slide"><a class="sSert__img-wrap" href="img/@2x/sert-1.jpg" data-fancybox="sertgal"><img class="swiper-lazy" src="#" data-src="img/@1x/sert-1.jpg" alt=""/></a>
+							</div>
+							<div class="sSert__slide swiper-slide"><a class="sSert__img-wrap" href="img/@2x/sert-2.jpg" data-fancybox="sertgal"><img class="swiper-lazy" src="#" data-src="img/@1x/sert-2.jpg" alt=""/></a>
+							</div>
+					</div>
+				</div>
+				<div class="sSert__control-wrap">
+					<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+						<svg class="icon icon-chevron-left ">
+							<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+						</svg>
+					</div>
+					<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+						<svg class="icon icon-chevron-right ">
+							<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sSert-->
 		<footer class="footer block-with-lazy">
 			<div class="container">
 				<div class="footer__head-row row"> 
