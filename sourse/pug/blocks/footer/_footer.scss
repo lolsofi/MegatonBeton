@@ -40,14 +40,23 @@
     @extend .btn-sm;
     @extend .btn-outline;
     width: rem(180);
+    @include media-breakpoint-down(sm) {
+      &:hover{
+
+        color: #ffffff !important;
+      }
+    }
   }
   
   &__policy{
     color: $secondary !important;
     border-bottom: 1px solid ;
-    &:hover{
-			border-color: transparent;
-		}
+    @include media-breakpoint-up(sm) {
+
+      &:hover{
+        border-color: transparent;
+      }
+    }
   }
 
   &__head-row{
@@ -129,11 +138,14 @@
     color: #B8B8B8;
     @include mt;
     cursor: pointer;
-    &:hover{
-      color: #ffffff;
-      .footer__icon-wrap{
-        background: #FFFFFF;
-        color: $body-color;
+    @include media-breakpoint-up(sm) {
+
+      &:hover{
+        color: #ffffff;
+        .footer__icon-wrap{
+          background: #FFFFFF;
+          color: $body-color;
+        }
       }
     }
   }

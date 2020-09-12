@@ -1,0 +1,53 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sSeeAlso/_sSeeAlso.pug
+include ../blocks/sDiscount/_sDiscount.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Реквизиты'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+head('Реквизиты')
+		.row
+			.col
+				h1= title
+			.col-sm-auto
+				+e.btn(href="#") 
+					+icon("doc")
+					| Скачать PDF
+	+sContent
+		table
+			-
+				let table = {
+					"Полное наименование организации":'Общество с ограниченной ответственностью «ВЕЛЕС»',
+					"Сокращенное наименование организации":'ООО «ВЕЛЕС»',
+					"Юридический адрес":'141008, Россия, Мытищи, улица Лётная, стр. 19, кабинет 409.12',
+					"Почтовый адрес":'141008, Россия, Мытищи, улица Лётная, стр. 19, кабинет 409.12',
+					"Телефон":'+7 (977) 833-58-89',
+					"ИНН/КПП":'5029231793/502901001',
+					"ОГРН":'1185029013135',
+					"Расчетный счет":'40702810500020006873',
+					"Корреспондентский счет":'30101810000000000201',
+					"БИК банка":'044525201',
+					"Банк":'ПАО АКБ «АВАНГАРД»',
+					"Адрес банка":'115035, Москва, Садовническая улица, д. 12, стр. 1',
+					"Генеральный директор":'Елисеев Алексей Геннадьевич. Действует на основании Устава',
+					"E-mail:":'Eliseevalex2@gmail.com',
+				}
+			each t1, t2 in table
+				tr
+					td.w-50: strong= t1
+					td.w-50= t2
+
+	+footer()
+
+
+	

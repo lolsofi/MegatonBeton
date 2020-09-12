@@ -10,7 +10,7 @@
 		@include mt;
 		display: block;
 		background: #474747;
-		color: #ffffff;
+		color: #ffffff !important;
 		border-radius: 50%;
 		display: flex;
 		justify-content: center;
@@ -18,10 +18,21 @@
 		width: rem(30);
 		height: rem(30);
 
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
-			opacity: .6 ;
-		}
+		
+			 // box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+			 @include media-breakpoint-up(sm){
+
+				  &--vk:hover{
+						background: #4A76A8;
+					}
+
+				  &--instagram:hover {
+						background: #E94754;
+					}
+				  &--fb:hover {
+						background: #1877F2;
+					}
+				} 
 		
 	}
 	.icon{

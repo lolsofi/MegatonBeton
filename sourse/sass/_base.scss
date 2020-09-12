@@ -46,6 +46,25 @@ h1{
 	 & + .section{
 		 padding-top: 0 ;
 	 }
+	 
+	 &__btn{
+		//  @extend .btn;
+			@include media-breakpoint-down(sm) {
+				margin-top: rem(30);
+			}
+		@extend .btn;
+		@extend .btn-primary;
+		// margin: 0;
+	 
+		width: rem(220);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		 .icon{
+			 font-size: rem(30);
+			 margin-right: rem(12);
+		 }
+	 }
 }
 html{
 
@@ -445,15 +464,23 @@ iframe {
 	color: $body-color;
 	&:hover{
 		color: $primary;
+		@include media-breakpoint-up(sm){
+		}
 	}
 }
 
 .btn-primary{
 	color: $body-color !important ;
 	&:hover{
+		@include media-breakpoint-up(sm){
 		background: #FFAF34 !important;
 		border-color: #FFAF34 !important;
 	}
+	}
+		@include media-breakpoint-down(sm){ 
+				background-color: $primary !important;
+				border-color: $primary !important ; 
+		}
 }
 
 .btn-section{

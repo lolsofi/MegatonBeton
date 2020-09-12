@@ -1,6 +1,9 @@
 
 	// start .sContent
 	.sContent {
+		 +.sDiscount{
+			 padding-top: 0;
+		 }
 		p{
 			margin-bottom: rem(23);
 		}
@@ -33,6 +36,30 @@
 				flex-shrink: 0;
 			}
 		}
+		td{
+			padding-left: rem(30);
+		}
+
+		&__map-wrap{
+			margin-bottom: rem(60);
+			border: 1px solid #E8E8E8;
+			box-sizing: border-box;
+			border-radius: 5px;
+			position: relative;
+			overflow: hidden;
+			// @include block(1146, 450);
+			height: 450px;
+			img{
+				object-fit: cover;
+			}
+			> * {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				left: 0;
+				top: 0;
+			}
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -43,19 +70,7 @@
 	//
 	@include media-breakpoint-between(md, xl) { }
 	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
+ 
 	@include media-breakpoint-down(xs) {} 
 
 } // end.sContent
@@ -65,4 +80,18 @@
 		padding-bottom: 34px;
 	}
 	padding-bottom: 17px;
+}
+
+@include media-breakpoint-up(lg) {
+
+	.column-lg-3{
+		columns: 3;
+	}
+}
+
+@include media-breakpoint-up(sm) {
+
+	.column-sm-2{
+		columns: 2;
+	}
 }

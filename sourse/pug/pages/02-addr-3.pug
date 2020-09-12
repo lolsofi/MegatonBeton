@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sSeeAlso/_sSeeAlso.pug
+include ../blocks/sDiscount/_sDiscount.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Адреса заводов'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+head(title)
+	+sContent
+		+e.map-wrap
+			+pic("map-addr",'bg')
+		ul.column-lg-3.column-sm-2
+			li д. Поярково, Клушинская, д. 5
+			li пос. Пироговский
+			li г. Электросталь, Носовихинское ш., 1Б
+			li Подольск, Б. Серпуховская, д. 1
+			li Москва, ул. генерала Дорохова, д. 5
+	+footer()
+
+
+	
