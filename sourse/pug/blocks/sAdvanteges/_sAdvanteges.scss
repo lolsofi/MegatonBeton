@@ -2,6 +2,8 @@
 	// start .sAdvanteges
 	.sAdvanteges {
 		--sPT: 0;
+ 
+		padding-bottom: calc(var(--sPB) * .3);
 		text-align: center;
 		img{
 			margin-bottom: rem(15);

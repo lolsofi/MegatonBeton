@@ -1,10 +1,14 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
+		img(src="img/@2x/head-bg.jpg" loading="lazy", alt="")
+		.td
+			.container
 
-			.row
-						
+				+b.section-title--before.text-center
+					h1 Бетон с&nbsp;доставкой в&nbsp;Москве и&nbsp;московской области
+					+e.text Доставка бетона в&nbsp;день заказа
+				+form-h()
+			+e.scroll-down
+				+icon('chevron-down')
 	// end headerBlock

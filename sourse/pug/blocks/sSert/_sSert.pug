@@ -1,0 +1,22 @@
+mixin sSert()
+	// start sSert
+	+b.SECTION.sSert.section#sSert&attributes(attributes)
+		.container
+			+b.section-title--before.text-center
+				h2 Свидетельства и&nbsp;сертификаты качества
+				+e.text Прайс-лист с&nbsp;актуальными ценами на&nbsp;бетон в&nbsp;Москве и&nbsp;Московской области
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin i(i)
+						+e.slide.swiper-slide
+							+e.img-wrap(href=`img/@2x/sert-${i}.jpg` data-fancybox="sertgal")
+								img.swiper-lazy(src="#" data-src=`img/@1x/sert-${i}.jpg`, alt="")
+					+i("1")
+					+i("2")
+					+i("1")
+					+i("2")
+					+i("1")
+					+i("2")
+			+e.control-wrap
+				+arrow
+	// end sSert

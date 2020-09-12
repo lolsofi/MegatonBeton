@@ -76,6 +76,7 @@ var JSCCommon = {
 					_this.menuMobile.classList.toggle("active");
 
 					document.body.classList.toggle("fixed");
+					document.querySelector('html').classList.toggle("fixed");
 					return false;
 				});
 			});
@@ -88,6 +89,7 @@ var JSCCommon = {
 			});
 			this.menuMobile.classList.remove("active");
 			document.body.classList.remove("fixed");
+			document.querySelector('html').classList.remove("fixed");
 		}
 	},
 	mobileMenu: function mobileMenu() {
@@ -201,14 +203,37 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '03.jpg';
+	screenName = '04.jpg';
 
 	if (screenName && x === "localhost:3000") {
-		$(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
+		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
 	} // /добавляет подложку для pixel perfect
 
 
-	function whenResize() {}
+	function whenResize() {
+		var topHPol = $(".headerBlock ").innerHeight() / 2;
+		var topH = $(".headerBlock ").innerHeight();
+		var topNav = $(".top-nav ").innerHeight();
+		$(window).on('scroll', function () {
+			if ($(window).scrollTop() > topNav) {
+				$('.top-nav  ').addClass('fixedReadyStart');
+			} else {
+				$('.top-nav  ').removeClass('fixedReadyStart');
+			}
+
+			if ($(window).scrollTop() > topHPol) {
+				$('.top-nav  ').addClass('fixedReady');
+			} else {
+				$('.top-nav  ').removeClass('fixedReady');
+			}
+
+			if ($(window).scrollTop() > topH) {
+				$('.top-nav  ').addClass('fixed');
+			} else {
+				$('.top-nav  ').removeClass('fixed');
+			}
+		});
+	}
 
 	window.addEventListener('resize', function () {
 		whenResize();
@@ -222,24 +247,24 @@ function eventHandler() {
 			loadPrevNext: true
 		},
 		watchOverflow: true
-	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defineProperty(_defaultSl, "navigation", {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	}), _defineProperty(_defaultSl, "pagination", {
-		el: ' .swiper-pagination',
-		type: 'bullets',
-		clickable: true // renderBullet: function (index, className) {
-		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// }
-
-	}), _defaultSl);
-	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true
+	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defaultSl);
+	var swiper4 = new Swiper('.sSert__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		spaceBetween: 20,
+		slidesPerView: 2,
+		navigation: {
+			nextEl: '.sSert .swiper-button-next',
+			prevEl: '.sSert .swiper-button-prev'
+		},
+		breakpoints: {
+			768: {
+				spaceBetween: 23,
+				slidesPerView: 4
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30
+			}
+		}
 	})); // modal window
 
 	$('.menu-item-has-children ul').after('<div class="toggleSubMenu"></div>');
@@ -247,13 +272,10 @@ function eventHandler() {
 		$(this).parent().toggleClass("active");
 		$(this).toggleClass("active").prev().toggle();
 	});
-	$(".footer__btn-top--js").click(function () {
+	$(".footer__btn-top--js").on('click', function () {
 		$('html, body').animate({
 			scrollTop: 0
 		}, 1100);
-	});
-	var Sticky2 = new hcSticky('.top-nav', {
-		stickTo: 'body'
 	});
 }
 

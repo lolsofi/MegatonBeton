@@ -4,11 +4,11 @@ mixin sBMaterials()
 		.container
 			.row
 				mixin item(i,h,li1,li2,li3)
-					.col-md-6
+					.col-lg-6
 						+e.item(href="#")
 							img(src=`img/@2x/bMaterials-${i}.jpg` loading="lazy", alt="")
 							+e.DIV.caption
-								.h2!= h
+								+e.h2!= h
 								UL
 									LI!= li1
 									LI!= li2

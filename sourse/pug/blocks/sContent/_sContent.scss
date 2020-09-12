@@ -4,7 +4,9 @@
 		p{
 			margin-bottom: rem(23);
 		}
-		 
+
+		
+		
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -30,3 +32,10 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.sContent
+
+.section--04{
+	@include media-breakpoint-up(sm) {
+		padding-bottom: 34px;
+	}
+	padding-bottom: 17px;
+}

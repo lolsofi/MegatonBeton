@@ -6,13 +6,18 @@
 	}
 	--fontSizeBase: 12px;
 	 
-	--sPT: #{rem(80 / 2)};
 	--sPB: #{rem(60)};
-	--sTPB: #{rem(40)};
+	@include media-breakpoint-up(lg){
+		
+		--sPT: #{rem(80 / 2)};
+		--sTPB: #{rem(40)};
+	}
+	--sPT: #{rem(70)};
+	--sTPB: #{rem(30)};
 
 
-		--swiperArrowSize: #{rem(68)};
-		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+		--swiperArrowSize: #{rem(60)};
+		--swiperArrowPosition: 0;
 		--swiperBorderColorDef: var(--bs-primary);
 		--swiperColorDef: var(--bs-primary);
 		--swiperBgDef: #ffffff;
