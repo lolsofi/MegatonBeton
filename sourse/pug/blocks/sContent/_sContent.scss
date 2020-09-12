@@ -4,6 +4,35 @@
 		p{
 			margin-bottom: rem(23);
 		}
+		li{
+			list-style: none;
+			position: relative;
+			margin-bottom: 1rem;
+		}
+		ul{
+			li{
+				padding-left: rem(15);
+				&::before{
+					content: '';
+					width: rem(5px);
+					height: rem(5px); 
+					background:$primary;
+					position: absolute;
+					left: 0;
+					border-radius: 50%;
+					top: rem(10);
+				}
+			}
+		}
+		&__pay-item{
+			display: flex;
+			align-items: center;
+			// padding-top: rem(14);
+			padding-bottom: rem(35);
+			img{
+				flex-shrink: 0;
+			}
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

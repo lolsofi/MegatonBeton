@@ -1,0 +1,38 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sSeeAlso/_sSeeAlso.pug
+include ../blocks/sDiscount/_sDiscount.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Оплата'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+head(title)
+	+sContent
+		p: strong Оплата услуг и&nbsp;продукции компании МегатонБетон возможна следующими способами:
+		br
+		.row
+			mixin item(i,t )
+				+e.pay-item.col-xl-3.col-lg-auto
+					img(src=`img/svg/pay-${i}.svg` loading="lazy", alt="").mr-3
+					= t
+			+item("1",'Наличный расчет')
+			+item("2",'Безналичный расчет')
+			+item("3",'Перевод на карту')
+		p: strong Дополнительные условия:
+		ul
+			li Доставка оплачивается от&nbsp;6&nbsp;кубов бетона (купить можете 1&nbsp;куб, доставка оплачивается как за&nbsp;6);
+			li Нормативное время разгрузки АБС 60&nbsp;мин. Далее оплачивается время простоя 1500&nbsp;в час.
+	+sDiscount
+	+footer()
+
+
+	

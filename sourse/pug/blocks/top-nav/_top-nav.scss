@@ -52,6 +52,8 @@ body.fixed .top-nav{
 }
 
 .top-nav { 
+//  max-width: fit-content;
+max-width: 100vw;
 	z-index: 1200 !important;
 		@include media-breakpoint-up(lg){ 
 			padding-top: rem(15);
