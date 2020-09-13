@@ -203,7 +203,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '2-1.jpg';
+	screenName = '10.jpg';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -264,6 +264,14 @@ function eventHandler() {
 				slidesPerView: 4,
 				spaceBetween: 30
 			}
+		}
+	}));
+	var swiperCont = new Swiper('.sContent__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		spaceBetween: 20,
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.sContent .swiper-button-next',
+			prevEl: '.sContent .swiper-button-prev'
 		}
 	})); // modal window
 

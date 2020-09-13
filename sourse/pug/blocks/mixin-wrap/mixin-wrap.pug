@@ -29,3 +29,11 @@ mixin head(title)
 				block
 			else
 				h1= title
+mixin head2(title)
+	+b.page-head
+		.container
+			+breadcrumb('Главная','Статьи', title)
+			if block
+				block
+			else
+				h1= title

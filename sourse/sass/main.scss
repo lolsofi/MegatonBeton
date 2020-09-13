@@ -44,6 +44,7 @@ $output-bourbon-deprecation-warnings: false;
 	top: rem(1);
 }
 .breadcrumb {
+	
 		@include media-breakpoint-up(lg) {
 
 			padding-top: rem(80);
@@ -67,18 +68,29 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/pagination";
 
 .pagination-wrapper ul {
+	width: 100%;
 	@extend .pagination;
+	margin-bottom: 0;
+	li{
+		flex-grow: 1;
+		text-align: center;
+ 
+	}
 }
 
 .pagination-wrapper li .page-numbers {
 	@extend .page-link;
+	display: block;
+	color: $body-color;
+	position: relative; 
 }
 
 .pagination-wrapper li {
 	@extend .page-item;
-
+	
 	.current {
 		z-index: 1;
+		box-shadow: inset 0 -2px 0 $primary;
 		// color: $pagination-active-color;
 		// background-color: $pagination-active-bg;
 		// border-color: $pagination-active-border-color;

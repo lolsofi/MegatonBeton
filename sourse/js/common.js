@@ -194,7 +194,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = '2-1.jpg';
+	screenName = '10.jpg';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -282,6 +282,20 @@ function eventHandler() {
 			}
 		}
 	});
+	
+	const swiperCont = new Swiper('.sContent__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		
+		spaceBetween: 20,
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.sContent .swiper-button-next',
+			prevEl: '.sContent .swiper-button-prev',
+		},
+
+	});
+
 	// modal window
 
 	

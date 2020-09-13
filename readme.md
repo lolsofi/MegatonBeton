@@ -10,3 +10,5 @@
 1. <https://lolsofi.github.io/MegatonBeton/public/07-contacts.html>
 1. <https://lolsofi.github.io/MegatonBeton/public/08-marks.html>
 1. <https://lolsofi.github.io/MegatonBeton/public/09-card.html>
+1. <https://lolsofi.github.io/MegatonBeton/public/10-articals.html>
+1. <https://lolsofi.github.io/MegatonBeton/public/11-artical.html>
