@@ -4,12 +4,16 @@
 		 +.sDiscount{
 			 padding-top: 0;
 		 }
+		 +.sServises{
+			 padding-bottom: rem(90);
+			 margin-top: rem(-37);
+		 }
 		p{
 			margin-bottom: rem(23);
 		}
 
 		&__item{
-			min-height: calc(100 - 10px);
+			// min-height: calc(100 - 10px);
 			margin-bottom: rem(15);
 			@include block(362, 264);
 			color: #ffffff !important;
@@ -30,6 +34,10 @@
 				width: 100%;
 				height: 100%;
 			}
+
+			// &:hover{
+			// 	opacity: 0.3;
+			// }
 		}
 
 		&__title{
@@ -72,7 +80,10 @@
 		}
 		th,
 		td{
-			padding-left: rem(30);
+			@include media-breakpoint-up(sm) {
+
+				padding-left: rem(30);
+			}
 		}
 
 		&__map-wrap{
@@ -206,12 +217,12 @@
 	
 } // end.sContent
 
-.section--04{
-	@include media-breakpoint-up(sm) {
-		padding-bottom: 34px;
-	}
-	padding-bottom: 17px;
-}
+// .section--04{
+// 	@include media-breakpoint-up(sm) {
+// 		padding-bottom: 34px;
+// 	}
+// 	padding-bottom: 17px;
+// }
 
 @include media-breakpoint-up(lg) {
 	

@@ -1,0 +1,129 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sAdvanteges/_sAdvanteges.pug
+//- include ../blocks/sServises/_sServises.pug
+//- include ../blocks/sSeeAlso/_sSeeAlso.pug
+//- include ../blocks/sBMaterials/_sBMaterials.pug
+//- include ../blocks/SMarks/_SMarks.pug
+include ../blocks/sArticals/_sArticals.pug
+include ../blocks/sDiscount/_sDiscount.pug
+include ../blocks/sCalc/_sCalc.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Доставка'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	+head(title)
+	+sContent
+		p Компания МегатонБетон осуществляет доставку бетона по&nbsp;Москве и&nbsp;Московской области собственными автопарком. В&nbsp;вашем распоряжении 22&nbsp;автомиксера объёмом от&nbsp;7&nbsp;до&nbsp;10&nbsp;м3.
+
+		p Выработка наших заводов составляет 120 кубов в&nbsp;час, что гарантирует Вам получение необходимого объема бетона или бетонной смеси в&nbsp;кротчайшие сроки.
+		br
+		br
+		.row
+			mixin item(i)
+				.col-md-4
+					+e.item(href=`img/@2x/artical-${i}.jpg` data-fancybox="bstonegal")
+						img(src=`img/@1x/artical-${i}.jpg` loading="lazy", alt="") 
+			+item(1, `Щебень гравийный`)
+			+item(2, `Щебень гранитный`)
+			+item(3, `Щебень известняковый`)
+		br
+		p: strong Тарифы на&nbsp;доставку бетона на&nbsp;ваш объект:
+		
+		table
+			thead
+				tr
+					th Расстояние
+					th Стоимость, руб
+			-
+				let tab = {
+					"до 10 км":"400 ₽",
+					"10-20 км":"450 ₽",
+					"20-30 км":"500 ₽", 
+					"30-40 км":"550 ₽",
+				}
+			each t1, t2 in tab
+				tr
+					td.w-50= t1
+					td.w-50= t2
+		br 
+		br 
+		mixin item(i,t )
+			+e.pay-item
+				img(src=`img/svg/shipping-${i}.svg` loading="lazy", alt="").mr-3
+				= t
+		+item("1",'Доставка осуществляется в день обращения')
+		+item("2",'Нормативное время выгрузки миксера 60 минут. Время выгрузки свыше нормы оплачивается исходя из цены 1500 ₽ в час')
+		+item("3",'Минимальная оплата доставки 6 м3')
+		h2: strong Карта заводов компании МегатонБетон
+		br
+		+e.map-wrap
+			+pic("map-addr",'bg')
+		ul.column-lg-3.column-sm-2
+			li д. Поярково, Клушинская, д. 5
+			li пос. Пироговский
+			li г. Электросталь, Носовихинское ш., 1Б
+			li Подольск, Б. Серпуховская, д. 1
+			li Москва, ул. генерала Дорохова, д. 5
+		br
+		br
+		+e.warning 
+			+icon("info")
+			strong Вся продукция компании МегатонБетон соответствует нормативным документам&nbsp;&mdash; ГОСТам 22690-2015 и&nbsp;10180-2012 и&nbsp;СНиПам 5.01.23-83 и&nbsp;2.03.11-85.
+		br
+		h2: strong Направления доставки
+		br
+		.tabs
+			.tabs__caption
+				.tabs__btn.active: span Товарный бетон
+				.tabs__btn: span Керамзитобетон
+				.tabs__btn: span Бетонный раствор
+				.tabs__btn: span Тощий бетон
+		div
+			mixin cont()
+				.tabs__content&attributes(attributes)
+					table
+						mixin tr(t1,t2,t3)
+							tr
+								td= t1
+								td= t2
+								td= t3
+						+tr("Бетон Апрелевка","Бетон Балашиха","Бетон Верея")
+						+tr("Бетон Видное","Бетон Воскресенск","Бетон Голицыно")
+						+tr("Бетон Апрелевка","Бетон Балашиха","Бетон Верея")
+						+tr("Бетон Видное","Бетон Воскресенск","Бетон Голицыно")
+						+tr("Бетон Апрелевка","Бетон Балашиха","Бетон Верея")
+						+tr("Бетон Видное","Бетон Воскресенск","Бетон Голицыно")
+						+tr("Бетон Апрелевка","Бетон Балашиха","Бетон Верея")
+						+tr("Бетон Видное","Бетон Воскресенск","Бетон Голицыно")
+			+cont()(class="active")
+			+cont()
+			+cont()
+			+cont()
+		br
+		br
+		br
+		 
+	
+		+e.form-block
+			+b.section-title--before.text-center
+				h2 Форма заявки
+				+e.text Оставьте заявку и&nbsp;наши сотрудники свяжутся с&nbsp;вами в&nbsp;кратчайшие сроки
+			+form-h(b=`Отправить заявку`)
+	
+		//- +sBMaterials()
+	//- +sAdvanteges
+	//- +sServises
+	//- +sSeeAlso
+	+footer()
+
+
+	
