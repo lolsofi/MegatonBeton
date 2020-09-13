@@ -7,28 +7,31 @@
 		p{
 			margin-bottom: rem(23);
 		}
-		
-		&__item{
-			padding-top: 36px;
-		}
 
-		&__img-wrap{
-			display: block;
-			max-width: 362px;
-			flex: 0 0 rem(362);
-			margin-bottom: 15px;
+		&__item{
+			min-height: calc(100 - 10px);
+			margin-bottom: rem(15);
+			@include block(362, 264);
+			color: #ffffff !important;
 			border-radius: rem(5);
 			overflow: hidden;
-			// object-fit: cover;
 			img{
+				position: absolute;
+				left: 0;
+				top: 0;
+				object-fit: cover;
 				width: 100%;
-				height: auto;
+				height: 100%;
 			}
 		}
 
 		&__title{
 			color: $body-color;
 			text-align: center;
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(23);
+			}
+			margin-bottom: rem(15);
 		}
 		
 		li{

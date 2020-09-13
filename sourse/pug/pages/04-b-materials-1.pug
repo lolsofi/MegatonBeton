@@ -10,7 +10,7 @@ include ../blocks/sSeeAlso/_sSeeAlso.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Стройматериалы'
+	- let  title= 'Песок'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -26,18 +26,43 @@ block pagecontent
 			li #[strong Карьерный песок]&nbsp;&mdash; универсальный материал не&nbsp;подверженный ни&nbsp;механической ни&nbsp;гидроочистке.
 			li #[strong Мытый карьерный песок]&nbsp;&mdash; добывается с&nbsp;промыванием большим количеством воды, в&nbsp;результате из&nbsp;него вымываются глина и&nbsp;пылеватые частицы.
 			li #[strong Сеяный карьерный песок]&nbsp;&mdash; песок, освобождённый от&nbsp;крупных фракций механическим путём.
+			br
 
 		.row
 			mixin item(i, t)
 				.col-md-4
 					+e.item
-						+e.img-wrap(href="#")
-							img(src=`img/@2x/04-1-${i}.jpg` loading="lazy", alt="")
-						+e.DIV.title!= t
+						img(src=`img/@2x/04-1-${i}.jpg` loading="lazy", alt="")
+					+e.DIV.title!= t
 
 			+item(1, `Карьерный песок`)
 			+item(2, `Мытый карьерный песок`)
 			+item(3, `Сеяный карьерный песок`)
+		br
+		p: strong Компания МегатонБетон поставит песок в&nbsp;день заказа по&nbsp;минимальным ценам:
+		br
+		table
+			thead
+				tr
+					th Наименование
+					th Единица измерения
+					th Стоимость с&nbsp;НДС за&nbsp;м3/руб
+			tbody
+				mixin tr(t1,t2)
+					tr
+						td= t1
+						td м#[sup 3]
+						td= t2
+				+tr('Карьерный песок','600 ₽')
+				+tr('Мытый карьерный песок','750 ₽')
+				+tr('Сеяный карьерный песок','850 ₽')
+		br
+		br
+		+e.form-block
+			+b.section-title--before.text-center
+				h2 Заказать песок
+				+e.text Оставьте заявку и&nbsp;наши сотрудники свяжутся с&nbsp;вами в&nbsp;кратчайшие сроки
+			+form-h(b=`Отправить заявку`)
 
 	//- +sAdvanteges
 	//- +sServises
