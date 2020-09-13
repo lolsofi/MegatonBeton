@@ -1,0 +1,26 @@
+mixin SMarks()
+	// start SMarks
+	+b.SMarks.section#SMarks&attributes(attributes) 
+		.row
+			mixin item( m, t, i='beton')
+				+e.col.col-xl-4.col-6
+					+e.item(href="#")
+						+e.DIV.img-wrap
+							img(src=`img/@1x/${i}.jpg`, alt="")
+							if m
+								+e.DIV.label= m
+						+e.DIV.title= t
+				// /+e.col.col-4
+			+item("М100",'Бетон М100 | B7,5')
+			+item("М150",'Бетон М150 | B12,5')
+			+item("М200",'Бетон М200 | B15')
+			+item("М250",'Бетон М250 | B20')
+			+item("М300",'Бетон М300 | B22,5')
+			+item("М350",'Бетон М350 | B25')
+			+item("М400",'Бетон М400 | B30')
+			+item("М450",'Бетон М450 | B35')
+			+item("М550",'Бетон М550 | B40')
+			+item("",'Тощий бетон','beton-1')
+			+item("",'Керамзитобетон','beton-2')
+			+item("",'Бетонный раствор','beton-3')
+	// end SMarks

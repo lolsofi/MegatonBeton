@@ -1,0 +1,46 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sSeeAlso/_sSeeAlso.pug
+include ../blocks/sDiscount/_sDiscount.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Контакты'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+head(title)
+		.row
+			.col
+				h1= title
+			.col-sm-auto.d-md-none
+				+e.btn(href="#") 
+					+icon("doc")
+					| Карта партнера
+	+sContent
+		.row
+			.col
+				ul
+					li Общество с ограниченной ответственностью «ВЕЛЕС»
+					li Отдел продаж: #[a.text-body(href="tel:+7(977)833-58-89") +7 (977) 833-58-89]
+					li E-mail: #[a.text-body(href="mailto:eliseevalex2@gmail.com") eliseevalex2@gmail.com]
+					li Адрес: 141008, Россия, Мытищи, улица Лётная, стр. 19, кабинет 409.12
+					li График работы: пн-пт с 9:00 до 18:00
+				br
+			.col-auto.d-none.d-md-block
+				+e.btn--map(href="#") 
+					+icon("doc")
+					| Карта партнера
+		+e.map-wrap.mb-0
+			+pic("map-addr",'bg')
+	+sDiscount
+	+footer()
+
+
+	

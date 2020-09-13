@@ -60,6 +60,7 @@
 				flex-shrink: 0;
 			}
 		}
+		th,
 		td{
 			padding-left: rem(30);
 		}
@@ -84,7 +85,29 @@
 				top: 0;
 			}
 		}
-		 
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		.icon{
+			font-size: rem(30);
+			margin-right: rem(10);
+		}
+		&--map{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: rem(220);
+			margin-bottom: rem(30);
+		}
+	}
+	&__form-block{
+		margin-left: auto;
+		margin-right: auto;
+		padding: rem(45) rem(20);
+		background: #F9F9F9;
+		border-radius: 5px;
+		margin-bottom: rem(25);
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

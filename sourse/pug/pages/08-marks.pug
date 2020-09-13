@@ -1,0 +1,69 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sSeeAlso/_sSeeAlso.pug
+include ../blocks/sBMaterials/_sBMaterials.pug
+include ../blocks/SMarks/_SMarks.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Марки бетона'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	+head(title)
+	+sContent()
+		p Марка бетона&nbsp;&mdash; основной показатель для материала, определяющая устойчивость к&nbsp;сжатию. Указывается при помощи литеры &laquo;М&raquo; и&nbsp;числового индекса в&nbsp;границах от&nbsp;50&nbsp;до&nbsp;1000.
+
+		p Данным показателем определяют максимум нагрузки, который допустим для бетона данного вида, выражаемый в&nbsp;кгс/см2. Однако стоит понимать, что под максимумом подразумевается нормативная прочность бетона в&nbsp;идеальных условиях.
+
+		p Класс бетона представляет собой гарантированную нагрузку, которую готовый бетон сможет на&nbsp;себя принять без последствий, измеряется в&nbsp;МПа (мегапаскалях).
+
+		p Этот показатель ввели для уточнений характеристик затвердевшего раствора, ведь различия возможны даже в&nbsp;рамках одной марки.
+
+		p Для обозначения класса бетона согласно фактической прочности используется маркировка буквой &laquo;В&raquo; и&nbsp;числом со&nbsp;значением в&nbsp;границах от&nbsp;5&nbsp;до&nbsp;60. Оно выражает давление, обозначаемое также в&nbsp;мегапаскалях, принимаемое на&nbsp;себя изделием из&nbsp;бетона. Класс соотносят с&nbsp;маркой, являющейся более распространённой в&nbsp;конкретной отрасли строительства.
+		br
+		br
+		h2: strong Таблица соотношения марки и&nbsp;класса
+		br
+		table
+			thead
+				tr
+					th Марке бетона
+					th Класс бетона
+					th Средняя прочность (кг/см2)
+			tbody
+				mixin tr(t1, t2, t3)
+					tr
+						td
+							a(href="#")= t1
+						td= t2
+						td= t3
+				- for (var x = 0; x < 4; x++)
+					+tr("М75",'В5','65')
+					+tr("М100",'В7,5','98')
+					+tr("М150",'В10','131')
+		br
+		br
+		p Требуется бетон высокого качества? Закажите бетон напрямую у&nbsp;производителя с&nbsp;доставкой&nbsp;&mdash; в&nbsp;компании МегатонБетон:
+		+SMarks()
+		+e.form-block
+			+b.section-title--before.text-center
+				h2 Заказать доставку бетона
+				+e.text Оставьте заявку и&nbsp;наши сотрудники свяжутся с&nbsp;вами в&nbsp;кратчайшие сроки
+			+form-h(b=`Отправить заявку`)
+		//- +sBMaterials()
+	//- +sAdvanteges
+	//- +sServises
+	//- +sSeeAlso
+	+footer()
+
+
+	
