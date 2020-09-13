@@ -7,6 +7,7 @@
 1. <https://lolsofi.github.io/MegatonBeton/public/03-price.html>
 1. <https://lolsofi.github.io/MegatonBeton/public/04-b-materials.html>
 1. <https://lolsofi.github.io/MegatonBeton/public/04-b-materials-1.html>
+1. <https://lolsofi.github.io/MegatonBeton/public/04-b-materials-2.html>
 1. <https://lolsofi.github.io/MegatonBeton/public/07-contacts.html>
 1. <https://lolsofi.github.io/MegatonBeton/public/08-marks.html>
 1. <https://lolsofi.github.io/MegatonBeton/public/09-card.html>

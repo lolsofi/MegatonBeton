@@ -31,7 +31,7 @@ block pagecontent
 		.row
 			mixin item(i, t)
 				.col-md-4
-					+e.item
+					+e.item(href=`img/@2x/04-1-${i}.jpg` data-fancybox="sandgal")
 						img(src=`img/@2x/04-1-${i}.jpg` loading="lazy", alt="")
 					+e.DIV.title!= t
 
