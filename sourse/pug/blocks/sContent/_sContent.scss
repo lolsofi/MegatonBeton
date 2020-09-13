@@ -7,28 +7,38 @@
 		p{
 			margin-bottom: rem(23);
 		}
-		
-		&__item{
-			padding-top: 36px;
-		}
 
-		&__img-wrap{
-			display: block;
-			max-width: 362px;
-			flex: 0 0 rem(362);
-			margin-bottom: 15px;
+		&__item{
+			min-height: calc(100 - 10px);
+			margin-bottom: rem(15);
+			@include block(362, 264);
+			color: #ffffff !important;
 			border-radius: rem(5);
 			overflow: hidden;
-			// object-fit: cover;
+			background: #272727;
+			&:hover{
+				img{
+					opacity: 0.75;
+				}
+			}
 			img{
+				@include mt;
+				position: absolute;
+				left: 0;
+				top: 0;
+				object-fit: cover;
 				width: 100%;
-				height: auto;
+				height: 100%;
 			}
 		}
 
 		&__title{
 			color: $body-color;
 			text-align: center;
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(23);
+			}
+			margin-bottom: rem(15);
 		}
 		
 		li{
@@ -139,11 +149,11 @@
 		margin-left: auto;
 		margin-right: auto;
 		max-width: rem(588);
-	}
-	img{
-		border-radius: 5px;
-		position: relative;
-		overflow: hidden;
+		img{
+			border-radius: 5px;
+			position: relative;
+			overflow: hidden;
+		}
 	}
 	ol{
 			counter-reset: num;
@@ -163,14 +173,23 @@
 		border-radius: 5px;
 		display: flex;
 		align-items: center;
-		padding: rem(20) rem(30);
+		@include media-breakpoint-up(sm) {
+			
+			padding: rem(20) rem(30);
+		}
+		padding: rem(20) rem(15);
+		margin-bottom: 1rem;
 		strong{
 			max-width: rem(1050);
 		}
 		.icon{
 			font-size: rem(30);
+											@include media-breakpoint-up(sm) {
 			margin-right: 1rem;
+		}
+		margin-right: .8rem;
 			color: $primary;
+			flex: 0 0 auto;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

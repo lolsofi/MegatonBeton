@@ -3,7 +3,7 @@
 	.sServises {
 		
 		&__item{
-			min-height: calc(100 - 10px) ;
+			min-height: calc(100% - 10px) ;
 			@extend .h6;
 			font-weight: bold;
 			margin-bottom: 10px;
