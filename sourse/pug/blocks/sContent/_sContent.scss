@@ -108,6 +108,7 @@
 		border-radius: 5px;
 		margin-bottom: rem(25);
 	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -142,3 +143,14 @@
 		columns: 2;
 	}
 }
+
+
+[aria-labelledby="id-66-title"] {
+	display: none !important;
+}
+
+	#chartdiv {
+		width: 100%;
+		height: rem(350);
+		margin-bottom: rem(60);
+	}
