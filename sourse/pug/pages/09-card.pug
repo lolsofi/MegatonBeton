@@ -1,0 +1,106 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sSeeAlso/_sSeeAlso.pug
+include ../blocks/sBMaterials/_sBMaterials.pug
+include ../blocks/SMarks/_SMarks.pug
+include ../blocks/sCalc/_sCalc.pug
+include ../blocks/sDiscount/_sDiscount.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Бетон M200 | B15'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	+head(title)
+	+sContent()
+		p Предлагаем купить бетон M200 B15 по&nbsp;низкой цене от&nbsp;производителя с&nbsp;доставкой по&nbsp;Москве и Московской области:
+		+sCalcSm()
+		br
+		br
+		h2: strong Характеристики и&nbsp;сфера применения бетона #[span М200 класса B15]
+		p M200 B15&nbsp;&mdash; марка тощего бетона, который широко используется в&nbsp;различных сферах строительства и&nbsp;ремонта. Это одна из&nbsp;самых популярных марок. Бетонная смесь отличается малым содержанием цемента, в&nbsp;основе гравийный или известняковый щебень. Раствор медленно застывает, что упрощает перевозку, готовый бетон обладает низкими показателями прочности и&nbsp;невысокой стоимостью.
+
+		p Основное назначение смеси класса M200 B15&nbsp;&mdash; заливка фундамента при малоэтажном строительстве (преимущественно частные дома, коттеджи, дачи), с&nbsp;его помощью осуществляется стяжка пола. Кроме того, раствор приобретают для выполнения коммунальных работ, так как он&nbsp;широко используется для производства бордюрной и&nbsp;тротуарной плитки.
+		br
+		h2: strong Свойства бетона #[span М200 класса B15]
+		br
+		table
+			-
+				let table = {
+					"Класс/прочность":"B15",
+					"Морозостойкость	":"F100",
+					"Водонепроницаемость	":"W4",
+					"Средняя плотность	":"196 кгс/кв.см",
+					"Подвижность":"П4",
+					"Жесткость":"Ж1",
+					"Добавки	":"Пластифицирующие",
+					"Это смесь	":"Да", 
+				}
+			each t1, t2 in table
+				tr
+					td.w-50= t1
+					td.w-50= t2
+
+		br
+		br
+		h4: strong Состав и пропорции бетона  #[span М200 класса B15]
+		<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+		<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+		<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+		script.
+			am4core.ready(function() {
+			// Themes begin
+			am4core.useTheme(am4themes_animated);
+			// Themes end
+			var chart = am4core.create("chartdiv", am4charts.PieChart3D);
+			chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+			chart.data = [
+				{
+				country: 'Щебень, 5,6 кг',
+				litres: 55,
+				},
+				{
+				country: 'Песок, 3,5 кг',
+				litres: 35, 
+				},
+				{
+				country: 'Цемент М500, 1 кг',
+				litres: 10, 
+				},
+			];
+			chart.innerRadius = am4core.percent(40);
+			chart.depth = 30;
+			chart.legend = new am4charts.Legend();
+			var series = chart.series.push(new am4charts.PieSeries3D());
+			series.dataFields.value = "litres";
+			series.dataFields.depthValue = "litres";
+			series.dataFields.category = "country"; 
+			series.slices.template.cornerRadius = 40; 
+			series.colors.list = [
+				am4core.color("#D9D9D9"),
+				am4core.color("#EF9C1C"),
+				am4core.color("#383838"),
+			];
+			}); // end am4core.ready()
+
+		#chartdiv
+
+		h5: strong Заказ от&nbsp;производителя с&nbsp;доставкой
+		p Мы&nbsp;реализуем бетон M200 B15 напрямую с&nbsp;завода-производителя с&nbsp;доставкой. У&nbsp;нас вы&nbsp;можете заказать тощий бетон по&nbsp;выгодной цене за&nbsp;1&nbsp;м3. Состав смеси в&nbsp;точности соответствует действующим стандартам ГОСТ. Мы&nbsp;поставляем любые объёмы продукции прямо на&nbsp;объект по&nbsp;всей территории Москвы и&nbsp;Московской области.
+	+sDiscount
+		//- +sBMaterials()
+	//- +sAdvanteges
+	//- +sServises
+	//- +sSeeAlso
+	+footer()
+
+
+	

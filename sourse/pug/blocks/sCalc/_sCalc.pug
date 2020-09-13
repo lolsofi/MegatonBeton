@@ -31,7 +31,7 @@ mixin sCalc()
 												td
 													+b.add
 														+e.btn--minus
-														input(type="number")
+														input(type="number" value="0")
 														+e.btn--plus
 									- for (var x = 0; x < 6; x++)
 										+tr("М75",'B5 (гравий) П4 F50 W2')
@@ -51,4 +51,37 @@ mixin sCalc()
 						.col
 							.strong На сумму:  #[span.text-primary 9 999 999 ₽]
 						+e.btn(type="button") Рассчитать доставку
+	// end sCalc
+mixin sCalcSm()
+	// start sCalc
+	+b.sCalc.section#sCalc&attributes(attributes) 
+			block
+			+e.price-wrap  
+				table.text-center
+					thead
+						tr
+							th Марка
+							th Наименование
+							th Стоимость с&nbsp;НДС за&nbsp;м3/руб
+							th Количество кубов
+					tbody
+						mixin tr(t1, t2)
+							tr
+								td
+									a(href="#")= t1
+								td= t2
+								td 3 100 ₽
+								td
+									+b.add
+										+e.btn--minus
+										input(type="number" value="0")
+										+e.btn--plus
+					+tr("М200",'B15 (гравий) П4 F50 W22')  
+			+e.footer.sticky-bottom.position-sticky
+				.row
+					+e.total.col-md-auto.col-6
+						.strong Всего выбрано товаров:  #[span.text-primary 0]
+					.col
+						.strong На сумму:  #[span.text-primary 0 ₽]
+					+e.btn(type="button") Рассчитать доставку
 	// end sCalc

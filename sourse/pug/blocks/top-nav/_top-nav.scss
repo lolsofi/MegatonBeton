@@ -2,16 +2,18 @@ body.main-page .top-nav{
 	position: absolute;
 
 	&.fixedReadyStart{
-		// position: fixed;
+		position: fixed;
 		transform: translateY(-100%);
-		
+		// position: absolute;
+		@include mt(0);
 	}
 			&.fixedReady{
 				
-				position: fixed;
+				@include mt(0.6);
 			}
 			&.fixed {
 				transform: translateY(0);
+				// position: fixed;
 			}
 			&:not(.fixedReady) {
 				
@@ -19,7 +21,7 @@ body.main-page .top-nav{
 				box-shadow: none;
 			}
 			&:not(.fixedReadyStart){
-				// @include mt(0);
+				@include mt(0);
 				
 	
 	svg{
