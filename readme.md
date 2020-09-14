@@ -8,6 +8,10 @@
 1. <https://lolsofi.github.io/MegatonBeton/public/04-b-materials.html>
 1. <https://lolsofi.github.io/MegatonBeton/public/04-b-materials-1.html>
 1. <https://lolsofi.github.io/MegatonBeton/public/04-b-materials-2.html>
+1. <https://lolsofi.github.io/MegatonBeton/public/05-services.html>
+1. <https://lolsofi.github.io/MegatonBeton/public/05-services-1.html>
+1. <https://lolsofi.github.io/MegatonBeton/public/05-services-2.html>
+1. <https://lolsofi.github.io/MegatonBeton/public/05-services-3.html>
 1. <https://lolsofi.github.io/MegatonBeton/public/06-shipping.html>
 1. <https://lolsofi.github.io/MegatonBeton/public/07-contacts.html>
 1. <https://lolsofi.github.io/MegatonBeton/public/08-marks.html>

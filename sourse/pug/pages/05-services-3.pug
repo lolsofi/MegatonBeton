@@ -1,0 +1,62 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sSeeAlso/_sSeeAlso.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Выезд замерщика'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	+head(title)
+	+sContent()
+		p Компания МегатонБетон оказывает услуги замерщика. Если вы&nbsp;осуществляете стройку своими силами и&nbsp;не&nbsp;обладаете необходимыми знаниями для замера обьема бетона с&nbsp;учётом всех нюансов, мы&nbsp;пришлём к&nbsp;вам на&nbsp;обьект замерщика. Цены на&nbsp;выезд замерщика зависят от&nbsp;расстояния до&nbsp;вашего обьекта (приведены ниже).
+
+		br
+		br
+		.row
+			mixin item(i)
+				.col-md-4
+					+e.item(href=`img/@2x/gager-${i}.jpg` data-fancybox="sandgal")
+						img(src=`img/@2x/gager-${i}.jpg` loading="lazy", alt="")
+
+			+item(1)
+			+item(2)
+			+item(3)
+		br
+		br
+		p: strong Закажите замер объёма в&nbsp;компании МегатонБетон и&nbsp;наш замерщик сделает всё за&nbsp;вас:
+		br
+		table
+			thead
+				tr
+					th Расстояние
+					th Стоимость, руб
+			tbody
+				mixin tr(t1,t2)
+					tr
+						td= t1
+						td= t2
+				+tr('10 км','2000 ₽')
+				+tr('10-20 км','2500 ₽')
+				+tr('20-40 км','3000 ₽')
+		br
+		br
+		+e.form-block
+			+b.section-title--before.text-center
+				h2 Заказать выезд замерщика
+				+e.text Оставьте заявку и&nbsp;наши сотрудники свяжутся с&nbsp;вами в&nbsp;кратчайшие сроки
+			+form-h(b=`Отправить заявку`)
+
+	+footer()
+
+
+	
