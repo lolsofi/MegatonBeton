@@ -6,7 +6,8 @@
 			@include block(362, 264);
 			overflow: hidden;
 			border-radius: 5px;
-			background: #272727;
+			background:$body-color;
+			margin-bottom: rem(25);
 			picture{
 				@include mt;
 			}
@@ -19,18 +20,7 @@
 				}
 			}
 		}
-		&__caption{
-				@include media-breakpoint-up(lg) {
-					
-					padding-top: rem(25);
-				}
-				@include media-breakpoint-up(lg) {
-
-					padding-top: rem(15);
-				}
-				padding-top: rem(25);
-			// margin-bottom: rem(25);
-		}
+ 
 		&__title{
 			font-weight: 800;
 			@extend .h6;

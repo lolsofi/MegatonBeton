@@ -4,15 +4,12 @@ mixin sArticals()
 		.container
 			.row
 				mixin item(i,t)
-					+e.col.col-lg-4
-						+e.row.row
-							.col-lg-12.col-sm-6
-								+e.img-wrap.bg-wrap(href="#")
-									+pic(`artical-${i}`,'bg',0)(class="picture-bg")
-							+e.caption.col-lg-12.col-sm-6
-								+e.DIV.title= t
-								p Большинство начинающих строителей уверены, что после освобождения бетона от опалубки при затвердевании раствора...
-								+e.btn(href="#") Читать далее
+					+e.col.col-lg-4 
+						+e.img-wrap.bg-wrap(href="#")
+							+pic(`artical-${i}`,'bg',0)(class="picture-bg") 
+						+e.DIV.title= t
+						p Большинство начинающих строителей уверены, что после освобождения бетона от опалубки при затвердевании раствора...
+						+e.btn(href="#") Читать далее
 					// /+e.col.col-4
 				- for (var x = 0; x < 3; x++)
 					+item("1",'Уход за бетоном после заливки')
