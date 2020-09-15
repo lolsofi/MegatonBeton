@@ -1,0 +1,61 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sSeeAlso/_sSeeAlso.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Аренда бетононасоса'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	+head(title)
+	+sContent()
+		p Компания МегатонБетон располагает собственными автобетононасосами от&nbsp;21&nbsp;до&nbsp;42&nbsp;метром. Если есть необходимость доставки бетона в&nbsp;места куда миксер не&nbsp;заедет, мы&nbsp;с&nbsp;удовольствием предоставим Вам их&nbsp;по&nbsp;выгодной цене.
+
+		br
+		.row
+			mixin item(i)
+				.col-md-4
+					+e.item(href=`img/@2x/rent-${i}.jpg` data-fancybox="sandgal")
+						img(src=`img/@2x/rent-${i}.jpg` loading="lazy", alt="")
+
+			+item(1)
+			+item(2)
+			+item(3)
+		br
+		br
+		p: strong Стоимость аренды бетононасоса:
+		br
+		table
+			thead
+				tr
+					th Длина насоса, м
+					th Стоимость за смену
+			tbody
+				mixin tr(t1,t2)
+					tr
+						td= t1
+						td= t2
+				+tr('Автобетононасос 21 метр','18000 ₽')
+				+tr('Автобетононасос 32 метра','21000 ₽')
+				+tr('Автобетононасос 42 метра','33000 ₽')
+		br
+		br
+		+e.form-block
+			+b.section-title--before.text-center
+				h2 Арендовать бетононасос
+				+e.text Оставьте заявку и&nbsp;наши сотрудники свяжутся с&nbsp;вами в&nbsp;кратчайшие сроки
+			+form-h(`Отправить заявку`)
+
+	+footer()
+
+
+	

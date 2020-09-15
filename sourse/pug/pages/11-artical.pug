@@ -99,12 +99,26 @@ block pagecontent
 		+sCalcSm()
 		p Работы по уходу за основанием после осуществления заливки можно считать законченными в ситуациях, когда получено минимум 65% прочности или срока осуществления распалубки, имеющего под собой конкретное техническое обоснование. Первым делом после заливки бетонной смеси необходимо обследовать опалубку для поиска дефектов, приводящих к протеканиям и последующему нарушению конструкции. При обнаружении изъянов необходимо их исправить до момента застывания бетона. Этот период в среднем занимает не более двух часов.
 	
-	+e.form-block
-		+b.section-title--before.text-center
-			h2 Форма заявки
-			+e.text Оставьте заявку и&nbsp;наши сотрудники свяжутся с&nbsp;вами в&nbsp;кратчайшие сроки
-		+form-h(b=`Отправить заявку`)
-	
+		+e.form-block
+			+b.section-title--before.text-center
+				h2 Форма заявки
+				+e.text Оставьте заявку и&nbsp;наши сотрудники свяжутся с&nbsp;вами в&nbsp;кратчайшие сроки
+			+form-h(`Отправить заявку`)
+		
+		+e.footer
+			.row
+				.col
+					+e.btn-back(href="#")
+						+icon('chevron-left')
+						| Вернуться назад
+				.col-sm-auto
+					.row
+						.col-auto Поделиться:
+						.col-auto
+							<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+							<script src="https://yastatic.net/share2/share.js"></script>
+							<div class="ya-share2" data-services="telegram,twitter,vkontakte,facebook,odnoklassniki"></div>
+			
 		//- +sBMaterials()
 	//- +sAdvanteges
 	//- +sServises

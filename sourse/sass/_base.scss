@@ -558,3 +558,11 @@ iframe {
 	padding-left: 0;
 	padding-right: 0;
 }
+
+
+.form-control{
+		@include media-breakpoint-down(sm) {
+			box-shadow: none !important;
+		}
+ 
+}

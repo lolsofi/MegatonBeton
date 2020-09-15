@@ -1,7 +1,14 @@
 .modal-win {
 	// display: block;
+	max-width: rem(558);
 	width: 100%;
 	position: relative;
+	@include media-breakpoint-up(sm) {
+		padding: rem(52) rem(68) rem(60);
+	}
+	padding: rem(41) rem(30) rem(199);
+	background: $white;
+	border-radius: 5px;
 
 	.modal-content {
 		// max-width: 485px;

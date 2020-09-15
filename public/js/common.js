@@ -180,11 +180,6 @@ var JSCCommon = {
 			}, 1100);
 			return false;
 		});
-	},
-	getCurrentYear: function getCurrentYear(el) {
-		var now = new Date();
-		var currentYear = document.querySelector(el);
-		if (currentYear) currentYear.innerText = now.getFullYear();
 	}
 };
 var $ = jQuery;
