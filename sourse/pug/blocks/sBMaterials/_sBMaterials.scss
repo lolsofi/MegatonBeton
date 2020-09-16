@@ -53,6 +53,7 @@
 			position: relative;
 			padding-left: rem(13);
 			padding-bottom: rem(4);
+			margin-bottom: 0 !important;
 		}
 		li::before {
 		content: "";

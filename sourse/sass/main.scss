@@ -81,7 +81,7 @@ $output-bourbon-deprecation-warnings: false;
 .pagination-wrapper li .page-numbers {
 	@extend .page-link;
 	display: block;
-	color: $body-color;
+	color: $body-color !important;
 	position: relative; 
 }
 

@@ -14,6 +14,7 @@
 			// position: relative;
 		}
 		&__footer{
+			margin-top: -1px;
 			background: #F9F9F9;
 			border-radius: 3px;
 			border: 1px solid #E8E8E8;
@@ -46,7 +47,7 @@
 		&__btn{
 			@include media-breakpoint-up(md) {
 
-				width: rem(268);
+				width: rem(272);
 			}
 				width: 100%;
 				@extend .btn;
@@ -107,10 +108,12 @@
 				&:first-child{
 					width: var(--s1);
 					flex: 0 0 var(--s1);
+					border-right: none;
 				}
 				&:nth-child(2){
 					width: var(--s2);
 					flex: 0 0 var(--s2);
+					border-right: none;
 				}
 				&:nth-child(3){
 					width: calc(100% - var(--s1) - var(--s2));
@@ -148,6 +151,7 @@
 } // end.sCalc
 .tabs{
 	background-color: #ffffff;
+	table{}
 	&__caption{
 		display: flex;
 			@include media-breakpoint-up(md) {
@@ -189,7 +193,8 @@
 			}
 		span{
 				border-bottom: 1px dashed;
-				@include mt;
+				// @include mt;
+				transition: border .3s;
 		}
 		&:hover{
 			span{
@@ -207,7 +212,12 @@
 		}
 	}
 }
+.tabs{
+	table{
 
+		margin-top: -1px;
+	}
+}
 table{
 	width: 100%;
  th{

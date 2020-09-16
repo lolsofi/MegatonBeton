@@ -34,9 +34,9 @@
 					position: absolute;
 						@include media-breakpoint-up(sm) {
 							top: rem(35);
-							right: 100%;
+							// right: 100%;
 							transform: none;
-							left: auto;
+							left: 100%;
 						}
 
 						top: calc(100% + 15px);

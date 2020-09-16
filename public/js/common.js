@@ -10,7 +10,6 @@ var JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".top-nav__menu-wrap"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".top-nav__menu-wrap ul li a")),
 	modalCall: function modalCall() {
 		$(".link-modal").fancybox({
 			arrows: false,
@@ -95,25 +94,23 @@ var JSCCommon = {
 	mobileMenu: function mobileMenu() {
 		var _this2 = this;
 
-		if (this.menuMobileLink) {
-			this.toggleMenu();
-			document.addEventListener('mouseup', function (event) {
-				var container = event.target.closest(".menu-mobile--js.active"); // (1)
+		this.toggleMenu();
+		document.addEventListener('mouseup', function (event) {
+			var container = event.target.closest(".top-nav__menu-wrap.active"); // (1)
 
-				if (!container) {
-					_this2.closeMenu();
-				}
-			}, {
-				passive: true
-			});
-			window.addEventListener('resize', function () {
-				if (window.matchMedia("(min-width: 992px)").matches) {
-					JSCCommon.closeMenu();
-				}
-			}, {
-				passive: true
-			});
-		}
+			if (!container) {
+				_this2.closeMenu();
+			}
+		}, {
+			passive: true
+		});
+		window.addEventListener('resize', function () {
+			if (window.matchMedia("(min-width: 992px)").matches) {
+				JSCCommon.closeMenu();
+			}
+		}, {
+			passive: true
+		});
 	},
 	// /mobileMenu
 	// табы  .
@@ -172,7 +169,7 @@ var JSCCommon = {
 	},
 	animateScroll: function animateScroll() {
 		// листалка по стр
-		$(" .top-nav li a, .scroll-link").click(function () {
+		$(" .scroll-link").click(function () {
 			var elementClick = $(this).attr("href");
 			var destination = $(elementClick).offset().top;
 			$('html, body').animate({
@@ -206,8 +203,8 @@ function eventHandler() {
 
 
 	function whenResize() {
-		var topHPol = $(".headerBlock ").innerHeight() / 2;
-		var topH = $(".headerBlock ").innerHeight();
+		var topHPol = $(".top-nav ").innerHeight() * 2;
+		var topH = $(".headerBlock ").innerHeight() * .6;
 		var topNav = $(".top-nav ").innerHeight();
 		$(window).on('scroll', function () {
 			if ($(window).scrollTop() > topNav) {
@@ -264,6 +261,10 @@ function eventHandler() {
 	var swiperCont = new Swiper('.sContent__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		spaceBetween: 20,
 		slidesPerView: 1,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction'
+		},
 		navigation: {
 			nextEl: '.sContent .swiper-button-next',
 			prevEl: '.sContent .swiper-button-prev'
@@ -279,6 +280,15 @@ function eventHandler() {
 		$('html, body').animate({
 			scrollTop: 0
 		}, 1100);
+	});
+	$(".headerBlock__scroll-down").on('click', function () {
+		var elementClick = $(this).parents(".headerBlock")[0];
+		console.log(elementClick.scrollHeight);
+		var destination = elementClick.scrollHeight;
+		$('html, body').animate({
+			scrollTop: destination
+		}, 1100);
+		return false;
 	});
 }
 

@@ -44,7 +44,11 @@ h1{
 	}
 }
 .page-head{
-	padding-bottom: rem(48);
+	@include media-breakpoint-up(lg) {
+
+		padding-bottom: rem(48);
+	}
+	padding-bottom: rem(48 / 2);
 	h1{
 		position: relative;
 		&::after{
@@ -142,7 +146,7 @@ html {
 	}
 	&__text{
 		@extend .h6;
-		color: #B8B8B8;
+		color:$secondary;
 		font-weight: 800;
 		padding-top: rem(35);
 
@@ -153,6 +157,7 @@ html {
 body {
 	min-width: 320px;
 	position: relative;
+	width: 100%;
 		&.fixed {
 		overflow: hidden;
 		position: absolute;

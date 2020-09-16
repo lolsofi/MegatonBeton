@@ -8,7 +8,9 @@
 		&__item{
 			text-align: center;
 			@include block; 
-			@extend .h6;
+			// @extend .h6;
+			// @extend rfs(20px);
+			@include rfs(20px);
 			font-weight: bold;
 			color: $body-color !important;
 			background: #F4F4F4;

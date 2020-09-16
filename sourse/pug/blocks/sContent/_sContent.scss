@@ -1,6 +1,7 @@
 
 	// start .sContent
 	.sContent {
+		 
 		 +.sDiscount{
 			 padding-top: 0;
 		 }
@@ -153,7 +154,28 @@
 	&__slider-wrapper{
 		position: relative;
 		margin-bottom: rem(60);
-
+		--swiperArrowSize: #{rem(45)};
+		.swiper-button-hand{
+			margin-top: 0;
+		}
+		.swiper-pagination{
+			position: absolute;
+			@include a-cent(x);
+			bottom: rem(30);
+			background: #FFFFFF;
+			border-radius: 60px;
+			width: auto;
+			width: rem(62);
+			color: $secondary;
+			height: rem(30);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.swiper-pagination-current{
+				color: $body-color;
+				margin-right: rem(2);
+			}
+		}
 	}
 	&__slider{
 		margin-left: auto;
@@ -250,6 +272,13 @@
 			@include roww(rem(17px));
 		}
 	}
+	@include media-breakpoint-down(md) {
+		&__row-servises .col-md-4{
+			&:nth-child(n + 2) {
+				display: none;
+			}
+		}
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -303,4 +332,12 @@
 			display: none;
 		}
 	} 
+}
+
+.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon {
+	height: rem(30) !important;
+	width: rem(30) !important;
+	background-size: rem(24) !important;
+	background-repeat: no-repeat;
+	background-position: center center;
 }

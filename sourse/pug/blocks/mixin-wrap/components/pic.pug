@@ -12,13 +12,13 @@ mixin pic(i, bg,  media='576px')
 			const data = (ifLazy ?  url  : null)
 
 		if source
-			source( srcset=url loading="lazy"  type=`image/${exp}`   )&attributes(attributes)
+			source( srcset=url   type=`image/${exp}`   )&attributes(attributes)
 		else
-			img(src=url loading="lazy" class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
+			img(src=url  class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
 	
 	// picture
-	picture()&attributes(attributes) 
-		noscript(class="loading-lazy")
+	noscript(class="loading-lazy")
+		picture()&attributes(attributes) 
 			if media
 				
 				each val in [webpFormat,exp] 

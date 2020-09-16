@@ -5,9 +5,18 @@
 		min-height: 100vh;
 		min-height: calc(var(--vh, 1vh) * 100);
 		display: table;
-		width: 100%;
-		padding-top: rem(180);
-		padding-bottom: rem(180);
+		width: 100%; 
+		@include media-breakpoint-up(md) {
+			--gv: #{rem(180)}; 
+		}
+			
+		@include media-breakpoint-up(sm) {
+		--gv: #{rem(120)};
+		}
+		--gv: #{rem(100)};
+			
+		padding-top: var(--gv);
+		padding-bottom: var(--gv); 
 		@include media-breakpoint-up(lg) {
 
 			margin-bottom: calc(var(--sPB) * 1.5);
@@ -74,7 +83,14 @@
 	h2 {
 		margin-bottom: 1px;
 	}
+	.section-title__text,
+	.form-wrap__small{
 
+		color: #B8B8B8;
+		a{
+			color: currentColor;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

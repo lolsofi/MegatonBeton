@@ -50,7 +50,7 @@ mixin sCalc()
 							.strong Всего выбрано товаров:  #[span.text-primary 99]
 						.col
 							.strong На сумму:  #[span.text-primary 9 999 999 ₽]
-						+e.btn(type="button") Рассчитать доставку
+						+e.btn.link-modal(href="#modal-call") Рассчитать доставку
 	// end sCalc
 mixin sCalcSm()
 	// start sCalc

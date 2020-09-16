@@ -38,9 +38,11 @@ body.main-page .top-nav{
 			color: $primary;
 		}
 	}
-	.menu>li:not(:hover):not(.current-menu-item)>a {
-		&:not(:hover){
-			color: #ffffff;
+	@include media-breakpoint-up(lg) {
+		.menu>li:not(:hover):not(.current-menu-item)>a {
+			&:not(:hover){
+				color: #ffffff;
+			}
 		}
 	}
 	.top-nav__logo::before,
@@ -55,7 +57,7 @@ body.fixed .top-nav{
 
 .top-nav { 
 //  max-width: fit-content;
- 
+	
 	z-index: 1200 !important;
 		@include media-breakpoint-up(lg){ 
 			padding-top: rem(15);
@@ -310,6 +312,7 @@ body.fixed .top-nav{
 			z-index: 200;
 			 a{
 				 padding: rem(18) rem(29);
+				 color: $body-color;
 				 @include media-breakpoint-down(lg) {
 					 padding-left: rem(48);
 					

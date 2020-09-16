@@ -3,6 +3,9 @@
 	.main-page .sDiscount{
 		background: #383838;
 		color: #ffffff;
+		position: relative;
+		overflow: hidden;
+		width: 100%;
 		// margin-top: rem(30);
 		p{
 			color: #ffffff;

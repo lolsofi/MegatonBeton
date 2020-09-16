@@ -2,7 +2,7 @@ const JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".top-nav__menu-wrap"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".top-nav__menu-wrap ul li a")),
+ 
 
 	modalCall() {
 
@@ -83,10 +83,10 @@ const JSCCommon = {
 
 	},
 	mobileMenu() {
-		if (this.menuMobileLink) {
+	 
 			this.toggleMenu();
 			document.addEventListener('mouseup', (event) => {
-				let container = event.target.closest(".menu-mobile--js.active"); // (1)
+				let container = event.target.closest(".top-nav__menu-wrap.active"); // (1)
 				if (!container) {
 					this.closeMenu();
 				}
@@ -96,8 +96,7 @@ const JSCCommon = {
 				if (window.matchMedia("(min-width: 992px)").matches) {
 					JSCCommon.closeMenu();
 				}
-			}, { passive: true });
-		}
+			}, { passive: true }); 
 	},
 	// /mobileMenu
 
@@ -164,7 +163,7 @@ const JSCCommon = {
 	},
 	animateScroll() {
 		// листалка по стр
-		$(" .top-nav li a, .scroll-link").click(function () {
+		$(" .scroll-link").click(function () {
 			const elementClick = $(this).attr("href");
 			const destination = $(elementClick).offset().top;
 
@@ -198,8 +197,8 @@ function eventHandler() {
 
 
 	function whenResize() {
-		const topHPol = $(".headerBlock ").innerHeight() / 2;
-		const topH = $(".headerBlock ").innerHeight();
+		const topHPol = $(".top-nav ").innerHeight() *2;
+		const topH = $(".headerBlock ").innerHeight() * .6;
 		const topNav = $(".top-nav ").innerHeight();
 		$(window).on('scroll', function () {
 			if ($(window).scrollTop() > topNav) {
@@ -285,6 +284,10 @@ function eventHandler() {
 		
 		spaceBetween: 20,
 		slidesPerView: 1,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction',
+		},
 		navigation: {
 			nextEl: '.sContent .swiper-button-next',
 			prevEl: '.sContent .swiper-button-prev',
@@ -304,7 +307,15 @@ function eventHandler() {
 		$('html, body').animate({ scrollTop: 0}, 1100);
 	})
 
+	$(".headerBlock__scroll-down").on('click', function () {
+		const elementClick = $(this).parents(".headerBlock")[0];
+		console.log(elementClick.scrollHeight);
+		const destination =  elementClick.scrollHeight;
 
+		$('html, body').animate({ scrollTop: destination }, 1100);
+
+		return false;
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
