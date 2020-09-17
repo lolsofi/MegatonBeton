@@ -299,12 +299,15 @@ function eventHandler() {
 
 	
 	$('.menu-item-has-children ul').after('<div class="toggleSubMenu"></div>'); 
-	$(document).on("click", ".toggleSubMenu", function () {
-		$(this).parent().toggleClass("active")
-		$(this).toggleClass("active").prev().toggle()
-	})
+ 
 	$(".footer__btn-top--js").on('click', function () {
-		$('html, body').animate({ scrollTop: 0}, 1100);
+		$('html, body').animate({ scrollTop: 0 }, 1100);
+	})
+
+	$(document).on('click', '.top-nav__menu-wrap.active .menu-item-has-children> a', function (e) {
+		e.preventDefault();
+		$(this).parent().toggleClass("active")
+			.find(".toggleSubMenu").toggleClass("active").prev().toggle() 
 	})
 
 	$(".headerBlock__scroll-down").on('click', function () {

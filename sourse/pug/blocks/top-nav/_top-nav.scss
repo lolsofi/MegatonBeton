@@ -249,6 +249,7 @@ body.fixed .top-nav{
 						 display: none;
 					 }
 				 cursor: pointer;
+				 pointer-events: none;
 			 	position: absolute;
 			 	right: 0;
 			 	top: 0;
@@ -413,6 +414,53 @@ body.fixed .top-nav{
 	@include media-breakpoint-down(lg) {
 		.row{
 			align-items: center;
+		}
+	 .menu li a{
+		 position: relative;
+		 z-index: 2;
+		 &::before{ 
+			content: '';
+			left: -100vw;
+			height: 100%;
+			width: 300vw; 
+			top: -1px;
+			position: absolute;
+		 }
+	 }
+	 .menu li:not(:last-child){
+		 
+			position: relative;
+			&::before{
+				content: '';
+				left: -100vw;
+				height: 1px;
+				width: 300vw;
+				background-color: #e8e8e8;
+				bottom: -1px;
+				position: absolute;
+			}
+		}
+		.menu ul{
+			position: relative;
+			&::after{
+				content: '';
+				left: -100vw;
+				height: 1px;
+				width: 300vw;
+				background-color: #e8e8e8;
+				top: -1px;
+				position: absolute;
+			}
+				&::before {
+					content: '';
+					left: -100vw;
+					height: 100%;
+					width: 300vw;
+					background: #f9f9f9;
+					top: 0;
+					position: absolute;
+					z-index: -1;
+				}
 		}
 	}
 
