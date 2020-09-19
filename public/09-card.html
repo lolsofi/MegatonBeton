@@ -227,7 +227,7 @@
 						am4core.useTheme(am4themes_animated);
 						// Themes end
 						var chart = am4core.create("chartdiv", am4charts.PieChart3D);
-						chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+						//- chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 						chart.data = [
 							{
 							country: 'Щебень, 5,6 кг',
@@ -250,6 +250,10 @@
 						series.dataFields.depthValue = "litres";
 						series.dataFields.category = "country"; 
 						series.slices.template.cornerRadius = 40; 
+						series.labels.template.disabled = true;
+						series.ticks.template.disabled = true;
+						series.ticks.template.clickable = false;
+						chart.legend.itemContainers.template.togglable = false;
 						series.colors.list = [
 							am4core.color("#D9D9D9"),
 							am4core.color("#EF9C1C"),
