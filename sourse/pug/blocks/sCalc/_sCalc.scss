@@ -226,6 +226,7 @@ table{
 	 border: 1px solid #4F4F4F;
 
  }
+ td{}
  td,
  th{
 	 padding: rem(3) rem(5);
@@ -239,8 +240,11 @@ table{
 	 tr{
 		 &:not(:last-child){
 			 td{
-
-				 border-bottom: none;
+				&::before{
+					// display: none;
+					border-bottom: none;
+				}
+				//  border-bottom: none;
 			 }
 		 }
 		 	@include media-breakpoint-up(md){
@@ -251,8 +255,25 @@ table{
 				}
 	 }
  }
+ tr{
+	 
+ }
  td{
-	 border: 1px solid #E8E8E8;
+	 position: relative;
+	 z-index: 2;
+	 &::before{
+		 content: '';
+		 position: absolute;
+		 left: 0;
+		 top: 0;
+		 z-index: -1;
+		 width: calc(100% + 1px);
+		 height: 100%;
+		 border: 1px solid #E8E8E8;
+		 
+		}
+		border: none;
+				//  border: 1px solid #E8E8E8;
 	 a{
 		 border-bottom: 1px solid;
 		 &:hover{
