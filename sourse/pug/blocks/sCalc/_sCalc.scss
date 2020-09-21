@@ -296,6 +296,7 @@ table{
 	}
 	input{
 		@extend .form-control;
+		max-width: calc(100% - #{rem(70)});
 		margin-left: rem(5);
 		margin-right: rem(5);
 		text-align: center;
