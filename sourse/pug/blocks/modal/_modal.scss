@@ -3,7 +3,7 @@
 	max-width: rem(558);
 	width: 100%;
 	position: relative;
-	@include media-breakpoint-up(sm) {
+	@include media-breakpoint-up(md) {
 		padding: rem(52) rem(68) rem(60);
 	}
 
