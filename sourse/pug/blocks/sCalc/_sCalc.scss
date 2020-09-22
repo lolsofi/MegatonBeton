@@ -44,6 +44,7 @@
 				}
 			}
 		}
+	
 		&__btn{
 			@include media-breakpoint-up(md) {
 
@@ -61,6 +62,8 @@
 			border-right: 1px solid #E8E8E8;
 		}
 		 
+			td,
+			th {}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -230,17 +233,17 @@ table{
  td,
  th{
 	 padding: rem(3) rem(5);
-	 min-height: rem(57);
+	 height: rem(57);
 	}
 	td{
 		
-		min-height: rem(60);
+		height: rem(60);
  }
  tbody{
 	 tr{
 		 &:not(:last-child){
 			 td{
-				&::before{
+				&::after{
 					// display: none;
 					border-bottom: none;
 				}
@@ -261,7 +264,7 @@ table{
  td{
 	 position: relative;
 	 z-index: 2;
-	 &::before{
+	 &::after{
 		 content: '';
 		 position: absolute;
 		 left: 0;

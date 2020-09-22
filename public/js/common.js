@@ -30,8 +30,16 @@ var JSCCommon = {
 					// ZOOM: "Zoom"
 
 				}
+			},
+			beforeLoad: function beforeLoad() {
+				document.querySelector("html").classList.add("ficed");
+			},
+			afterClose: function afterClose() {
+				document.querySelector("html").classList.remove("ficed");
 			}
 		});
+		$.fancybox.open(items, opts, index);
+		$.fancybox.close();
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
 		});

@@ -64,15 +64,15 @@
 			height: 0px;
 			border: 2px solid #EF9C1C;
 			@include media-breakpoint-up(sm) {
-				margin-top: rem(24);
 			}
-			margin-top: rem(16);
+			margin-top: rem(24);
+			// margin-top: rem(16);
 			margin-right: auto;
 			margin-left: 0;
 		}
 	}
 	.text-center{
-		&__title-h {
+		.form-wrap__title-h {
 			&::after{
 				margin-left: auto;
 			}

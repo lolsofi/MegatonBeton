@@ -48,7 +48,7 @@ mixin modal()
 	+b.modal-win--lg(id="modal-calc" class=" " style="display: none" )
 		+form-wrap
 			+e.title-h Рассчитать доставку
-			p.strong.pb-2 Вы выбрали:
+			p.strong.pb-2.pt-2 Вы выбрали:
 			table
 				tr
 					td М75
@@ -87,7 +87,7 @@ mixin modal()
 					+input("Дата доставки")
 			+e.tb
 				+e.small.ord Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;#[a(href="#") пользовательским соглашением]
-			+e.btn.or(type="submit") Отправить заявку
+			+e.btn.or.mb-3(type="submit") Отправить заявку
 	// /#modal-calc
 
 
