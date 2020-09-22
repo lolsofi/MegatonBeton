@@ -68,7 +68,14 @@
 			}
 			margin-top: rem(16);
 			margin-right: auto;
-			margin-left: auto;
+			margin-left: 0;
+		}
+	}
+	.text-center{
+		&__title-h {
+			&::after{
+				margin-left: auto;
+			}
 		}
 	}
 

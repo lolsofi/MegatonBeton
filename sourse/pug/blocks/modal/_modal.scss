@@ -6,10 +6,76 @@
 	@include media-breakpoint-up(sm) {
 		padding: rem(52) rem(68) rem(60);
 	}
+
 	padding: rem(41) rem(30) rem(20);
 	background: $white;
 	border-radius: 5px;
+	td{
+		padding: rem(15);
+		&:nth-child(3){
+			white-space: nowrap;
+		}
+		&:last-child{
+			width: rem(60);
+			text-align: center;
+		}
+		.icon{
+			font-size: 12px;
+			cursor: pointer;
+		}
+	}
+	table{
+		margin-bottom: rem(36);
+			@include media-breakpoint-down(sm){
+				display: block;
+				tr{
+					display: flex;
+					flex-wrap: wrap;
+					margin-bottom: rem(10);
+					border: 1px solid #e8e8e8;
+					border-top: none;
+					// padding-right: rem(60);
+					position: relative;
+				}
+				td{
+					display: block;
+				 
+					&:nth-child(1){
+						// flex-grow: 1;
+						order: -1;
+					
+					}
+					&:nth-child(3){
+						order: -1;
+						flex-grow: 1;
+					}
+					&:nth-child(2){
+						// order: 1;
+						flex-grow: 1;
+						width: 100%;
+					}
 
+					&:nth-last-child(2){
+						flex-grow: 1;
+						// margin-right: rem(-60);
+						
+					}
+					&:last-child{
+						position: absolute;
+						right: 0;
+						top: 0;
+					}
+				}
+			}
+	}
+	&--lg{
+		max-width: 752px;
+		.form-wrap__tb {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(430);
+		}
+	}
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;

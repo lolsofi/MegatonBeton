@@ -30,7 +30,7 @@ mixin modal()
 			.text-center
 				+e.title-h Заказать бетон
 			p.after-headline Оставьте заявку и&nbsp;наши сотрудники свяжутся с&nbsp;вами в&nbsp;кратчайшие сроки
-			+input("Марка бетона")
+			+input("Марка бетона",'select')
 			+input("Введите объем")
 			+input("Введите имя")
 			+input("+7 (___) ___-__-__",'tel')
@@ -45,6 +45,50 @@ mixin modal()
 				+e.title-h Спасибо, ваша заявка отправлена!
 			p.after-headline Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;кратчайшие сроки
 	// /#modal-thx
+	+b.modal-win--lg(id="modal-calc" class=" " style="display: none" )
+		+form-wrap
+			+e.title-h Рассчитать доставку
+			p.strong.pb-2 Вы выбрали:
+			table
+				tr
+					td М75
+					td B5 (гравий) П4 F50 W2
+					td 3 100 ₽
+					td
+						+b.add
+							+e.btn--minus
+							input(type="number" value="0")
+							+e.btn--plus
+					td 
+						+e.delete
+							+icon('close')
+							
+				tr
+					td М75
+					td B5 (гравий) П4 F50 W2 если длинное название товара
+					td 3 100 ₽
+					td
+						+b.add
+							+e.btn--minus
+							input(type="number" value="0")
+							+e.btn--plus
+					td 
+						+e.delete
+							+icon('close')
+			p.strong.pb-2 Заполните форму:
+			.row.row--sm
+				.col-lg-6
+					+input("Введите имя")
+				.col-lg-6
+					+input("+7 (___) ___-__-__",'tel')
+				.col-lg-6
+					+input("Адрес доставки")
+				.col-lg-6
+					+input("Дата доставки")
+			+e.tb
+				+e.small.ord Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;#[a(href="#") пользовательским соглашением]
+			+e.btn.or(type="submit") Отправить заявку
+	// /#modal-calc
 
 
 

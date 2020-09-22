@@ -50,7 +50,7 @@
 										</svg>Калькулятор</a>
 									</div>
 									<div class="col">
-										<div class="d-none d-lg-block"><a class="top-nav__link" href="#"> 
+										<div class="d-none d-lg-block"><a class="top-nav__link link-modal" href="#modal-orderBeton"> 
 											<svg class="icon icon-flag ">
 												<use xlink:href="img/svg/sprite.svg#flag"></use>
 											</svg>Заказать бетон</a>
@@ -354,7 +354,14 @@
 						</div>
 					</div>
 					<p class="after-headline">Оставьте заявку и&nbsp;наши сотрудники свяжутся с&nbsp;вами в&nbsp;кратчайшие сроки</p>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Марка бетона" name="text"/>
+					<div class="form-wrap__input-wrap form-group">
+						<select class="form-wrap__input form-control" name="select">
+							<option value="Марка бетона">Марка бетона</option>
+							<option value=" placeholder 1">placeholder 1</option>
+							<option value=" placeholder 2">placeholder 2</option>
+							<option value=" placeholder 3">placeholder 3</option>
+							<option value=" placeholder 4">placeholder 4</option>
+						</select>
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите объем" name="text"/>
@@ -394,6 +401,95 @@
 			</div>
 		</div>
 		<!-- /#modal-thx-->
+		<div class="modal-win modal-win--lg" id="modal-calc" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="form-wrap__title-h">Рассчитать доставку
+					</div>
+					<p class="strong pb-2">Вы выбрали:</p>
+					<table>
+						<tr>
+							<td>М75</td>
+							<td>B5 (гравий) П4 F50 W2</td>
+							<td>3 100 ₽</td>
+							<td>
+								<div class="add">
+									<div class="add__btn add__btn--minus">
+									</div>
+									<input type="number" value="0"/>
+									<div class="add__btn add__btn--plus">
+									</div>
+								</div>
+							</td>
+							<td> 
+								<div class="form-wrap__delete">
+									<svg class="icon icon-close ">
+										<use xlink:href="img/svg/sprite.svg#close"></use>
+									</svg>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>М75</td>
+							<td>B5 (гравий) П4 F50 W2 если длинное название товара</td>
+							<td>3 100 ₽</td>
+							<td>
+								<div class="add">
+									<div class="add__btn add__btn--minus">
+									</div>
+									<input type="number" value="0"/>
+									<div class="add__btn add__btn--plus">
+									</div>
+								</div>
+							</td>
+							<td> 
+								<div class="form-wrap__delete">
+									<svg class="icon icon-close ">
+										<use xlink:href="img/svg/sprite.svg#close"></use>
+									</svg>
+								</div>
+							</td>
+						</tr>
+					</table>
+					<p class="strong pb-2">Заполните форму:</p>
+					<div class="row row--sm">
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите имя" name="text"/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+7 (___) ___-__-__" name="tel"/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Адрес доставки" name="text"/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Дата доставки" name="text"/>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+					</div>
+					<div class="form-wrap__tb">
+						<div class="form-wrap__small ord">Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a href="#">пользовательским соглашением</a>
+						</div>
+					</div>
+					<button class="form-wrap__btn or" type="submit">Отправить заявку
+					</button>
+				</form>
+			</div>
+		</div>
+		<!-- /#modal-calc-->
 		<!-- end modals-->
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>

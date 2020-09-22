@@ -230,11 +230,11 @@ table{
  td,
  th{
 	 padding: rem(3) rem(5);
-	 height: rem(57);
+	 min-height: rem(57);
 	}
 	td{
 		
-		height: rem(60);
+		min-height: rem(60);
  }
  tbody{
 	 tr{

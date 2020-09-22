@@ -147,12 +147,13 @@ body.fixed .top-nav{
 			 }
 			 .icon{
 				 font-size: rem(20) !important;
-				 margin-right: rem(5);
+				 margin-right: rem(5) !important;
 			 }
 		 }
 	 }
 	&__mail{
-		@extend .text-secondary;
+		// @extend .text-secondary;
+		color: #b8b8b8 !important;
 	}
 	&__btn{
 		@include media-breakpoint-up(xl){

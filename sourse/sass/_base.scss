@@ -85,8 +85,8 @@ h1{
 }
 html{
 
-	height: 100%;
-	overflow-x: hidden; 
+	// height: 100%;
+	// overflow-x: hidden; 
 	max-width: 100vw;
 	&.fixed{
 
@@ -324,21 +324,21 @@ ul {
 }
 
 
-// select.form-control {
-// 	background-image: url(../img/svg/chevron-up.svg);
-// 	background-repeat: no-repeat;
-// 	background-position: calc(100%  - 20px) 50%; // background-size: rem(18) ;
-// 	padding-right: rem(43px);
-// 	appearance: none !important;
+select.form-control {
+	background-image: url(../img/svg/chevron-down-select.svg);
+	background-repeat: no-repeat;
+	background-position: calc(100%  - 20px) 50%; // background-size: rem(18) ;
+	padding-right: rem(43px);
+	appearance: none !important;
 
-// 	&:not([size]):not([multiple]) {
-// 		height: $input-height;
-// 	}
+	&:not([size]):not([multiple]) {
+		height: $input-height;
+	}
 
-// 	&:focus::-ms-value {
+	&:focus::-ms-value {
 
-// 	}
-// }
+	}
+}
 
 
 input[type='number'] {
@@ -576,4 +576,8 @@ iframe {
 			box-shadow: none !important;
 		}
  
+}
+
+.row--sm{
+	--bs-gutter-x: 15px;
 }
