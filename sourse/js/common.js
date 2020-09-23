@@ -33,9 +33,7 @@ const JSCCommon = {
 				document.querySelector("html").classList.remove("ficed")
 			},
 		});
-		$.fancybox.open(items, opts, index);
-
-		 
+	 
 		$.fancybox.close();
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
