@@ -177,15 +177,28 @@
 			}
 		}
 	}
+	&__slide{
+		@include block(588, 430);
+		position: relative;
+		img{
+			border-radius: 5px; 
+			overflow: hidden;
+			height: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			position: absolute;
+			@include a-cent1;
+			
+		}
+	}
 	&__slider{
 		margin-left: auto;
 		margin-right: auto;
+		text-align: center;
 		max-width: rem(588);
-		img{
-			border-radius: 5px;
-			position: relative;
-			overflow: hidden;
-		}
 	}
 	ol{
 			counter-reset: num;

@@ -20,9 +20,9 @@
 		p{
 			margin-bottom: rem(25);
 		}
-		picture{
-			margin-bottom: rem(65);
-			text-align: center;
+		// picture,
+		.order-lg-first {
+			margin-bottom: var(--sTPB);
 		}
 		&__btn{
 			margin-bottom: rem(30);

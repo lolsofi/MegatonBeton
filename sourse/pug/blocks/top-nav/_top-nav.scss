@@ -218,7 +218,7 @@
 			font-weight: bold;
 		}
 		&>li:hover > a,
-		&>li.current-menu-item a { 
+		&>li.current-menu-item >a { 
 			color: $primary;
 
 		} 
@@ -421,7 +421,7 @@
 
 
 
-body.main-page .top-nav {
+.main-page:not(.fixed) .top-nav {
 	position: absolute;
 
 	&:not(.fixedReady) {
