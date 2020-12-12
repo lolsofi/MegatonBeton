@@ -258,11 +258,21 @@ table{
 				}
 	 }
  }
- tr{
-	 
+ tbody{
+	 tr{
+		 &:first-child{
+			 border-top: 1px solid #E8E8E8;
+	
+		 }
+		 border-bottom: 1px solid #E8E8E8;
+		 
+	 }
+
  }
  td{
 	 position: relative;
+	 border: 0 solid #E8E8E8;
+	 border-width: 0 1px;
 	 z-index: 2;
 	 &::after{
 		 content: '';
@@ -272,10 +282,9 @@ table{
 		 z-index: -1;
 		 width: calc(100% + 1px);
 		 height: 100%;
-		 border: 1px solid #E8E8E8;
 		 
 		}
-		border: none;
+		// border: none;
 				//  border: 1px solid #E8E8E8;
 	 a{
 		 border-bottom: 1px solid;

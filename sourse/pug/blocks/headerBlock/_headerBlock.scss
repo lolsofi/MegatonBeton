@@ -72,6 +72,19 @@
 		height: 100%;
 		object-fit: cover;
 	}
+	&__video-block{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		video{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 
 	// background-image: url(../img);
 	// background-color: #000000;

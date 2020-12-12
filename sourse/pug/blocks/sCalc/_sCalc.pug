@@ -33,11 +33,11 @@ mixin sCalc()
 														+e.btn--minus
 														input(type="number" value="0")
 														+e.btn--plus
-									- for (var x = 0; x < 6; x++)
-										+tr("М75",'B5 (гравий) П4 F50 W2')
-										+tr("М100",'B7,5 (гравий) П4 F100 W2')
-										+tr("М75",'B5 (гравий) П4 F50 W2')
-							
+										- for (var x = 0; x < 6; x++)
+											+tr("М75",'B5 (гравий) П4 F50 W2')
+											+tr("М100",'B7,5 (гравий) П4 F100 W2')
+											+tr("М75",'B5 (гравий) П4 F50 W2')
+								
 							
 						+cont()(class="active")
 						+cont()
@@ -76,7 +76,7 @@ mixin sCalcSm()
 										+e.btn--minus
 										input(type="number" value="0")
 										+e.btn--plus
-					+tr("М200",'B15 (гравий) П4 F50 W22')  
+						+tr("М200",'B15 (гравий) П4 F50 W22')  
 			+e.footer.sticky-bottom.position-sticky
 				.row
 					+e.total.col-md-auto.col-6

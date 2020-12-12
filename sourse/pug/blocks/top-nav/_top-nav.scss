@@ -421,7 +421,7 @@
 
 
 
-.main-page:not(.fixed) .top-nav {
+html:not(.fixed) .main-page .top-nav {
 	position: absolute;
 
 	&:not(.fixedReady) {

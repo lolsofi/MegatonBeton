@@ -1,7 +1,12 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		img(src="img/@2x/head-bg.jpg" loading="lazy", alt="")
+		+e.video-block.video-background 
+			<video class="fillItUp video" id="bgvid" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+				<source src="video/video-sm.mp4" loading="lazy" type="video/mp4"/>
+				// <source src="video/video.ogv" loading="lazy" type="video/ogv"/>
+				// <source src="video/video.webm" loading="lazy" type="video/webm"/>
+			</video>
 		.td
 			.container
 
